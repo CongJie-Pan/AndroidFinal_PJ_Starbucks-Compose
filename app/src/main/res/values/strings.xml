@@ -1,164 +1,163 @@
 <resources>
-    <string name="app_name">Starbucks India Compose</string>
-    <string name="go_back">Go back button</string>
+    <string name="app_name">星巴克StarBucks</string>
+    <string name="go_back">返回按鈕</string>
 
     <!-- Dashboard - Logged In -->
-    <string name="home_header_logged_in">Good %s , %s</string> <!-- Good Morning . Tom-->
-    <string name="profile">Profile</string>
-    <string name="pay_in_store">Pay in store</string>
+    <string name="home_header_logged_in">早安 %s , %s</string> <!-- 例如：早安，Tom -->
+    <string name="profile">個人資料</string>
+    <string name="pay_in_store">店內支付</string>
 
     <!-- Dashboard - Logged out -->
-    <string name="home_header_logged_out">It\'s a great day for coffee</string>
-    <string name="sign_in">Sign in</string>
-    <string name="join_now">Join now</string>
-
+    <string name="home_header_logged_out">今天是喝咖啡的好日子</string>
+    <string name="sign_in">登入</string>
+    <string name="join_now">立即加入</string>
 
     <!-- Dashboard - Common-->
-    <string name="inbox">Inbox</string>
-    <string name="settings">Settings</string>
-    <string name="details">Details</string>
+    <string name="inbox">收件箱</string>
+    <string name="settings">設定</string>
+    <string name="details">詳情</string>
 
     <!-- Settings-->
-    <string name="preferences">Preferences</string>
-    <string name="security">Security</string>
-    <string name="About">About</string>
+    <string name="preferences">偏好設定</string>
+    <string name="security">安全性</string>
+    <string name="About">關於</string>
 
-    <string name="notifications">Notifications</string>
-    <string name="shake_to_pay">Shake to Pay</string>
+    <string name="notifications">通知</string>
+    <string name="shake_to_pay">搖一搖支付</string>
 
-    <string name="passcode_lock">Passcode Lock</string>
-    <string name="card_faq">Card FAQs</string>
-    <string name="terms_of_use">Terms of use</string>
-    <string name="privacy_policy">Privacy policy</string>
-    <string name="feedback">Feedback</string>
-    <string name="tell_a_friend">Tell a friend</string>
-    <string name="refer_a_friend">Refer a friend</string>
-    <string name="sign_out">Sign Out</string>
-    <string name="app_version">App version %s</string>
+    <string name="passcode_lock">密碼鎖</string>
+    <string name="card_faq">卡片常見問題</string>
+    <string name="terms_of_use">使用條款</string>
+    <string name="privacy_policy">隱私政策</string>
+    <string name="feedback">意見反饋</string>
+    <string name="tell_a_friend">我要推薦</string>
+    <string name="refer_a_friend">有朋友使用這個APP</string>
+    <string name="sign_out">登出</string>
+    <string name="app_version">應用程式版本 %s</string>
 
     <!-- Dashboard-->
-    <string name="popular_menu_items">Popular menu items</string>
-    <string name="user_greeting">Hello Ruthvik! \nReady for your coffee ?</string>
-    <string name="latest_updates">Latest updates</string>
-    <string name="news_headline">Learn more about the \nWorld of Coffee</string>
-    <string name="news_title">Coffee Beginnings</string>
-    <string name="news_subtitle">How world\'s most traded commodity came into existences</string>
-    <string name="learn_more">Learn more</string>
-    <string name="news_for_you">We have news for you</string>
+    <string name="popular_menu_items">熱門菜單品項</string>
+    <string name="user_greeting">您好 ! \n準備好來杯咖啡了嗎？</string>
+    <string name="latest_updates">最新消息</string>
+    <string name="news_headline">探索咖啡的世界</string>
+    <string name="news_title">咖啡的起源</string>
+    <string name="news_subtitle">世界上最重要的商品之一是如何誕生的 ?</string>
+    <string name="learn_more">了解更多</string>
+    <string name="news_for_you">您可能感興趣的新聞</string>
 
     <!-- News Screen-->
-    <string name="starbucks_blog">STARBUCKS | 1 min read</string>
+    <string name="starbucks_blog">星巴克 | 1 分鐘閱讀</string>
     <string name="starbucks_blog_content">
-        The history of coffee is rich with legend and intrigue. Coffee has grown to be one of the world’s most traded agricultural commodities and is a favorite beverage, celebrated and enjoyed across cultures and continents. \n \n
-        And it all began long ago, circa AD 800–900, with an Ethiopian goat herder, Kaldi, who noticed his goats became energetic after eating berries of a certain shrub. Curious, he tried one himself and noticed it had a similar effect. A monk who came across Kaldi and his dancing goats grew intrigued and picked some berries from the same shrub. He crushed them into a powder and added boiling water (this may have been the first-ever cup of coffee). Upon tasting the concoction and realizing it released energy, he rushed back to his monastery to share his findings.\n \n
-        The monks hailed the discovery as a “gift from the Lord,” for now they would be able to stay awake during their long prayers. Starbucks became part of coffee’s rich history in 1971, opening its first store in Seattle’s Pike Place Market.\n \n
+        咖啡的歷史充滿了傳說與神秘。咖啡已經成為世界上最重要的農產品之一，並在各種文化與大陸中深受喜愛。\n \n
+        這一切可以追溯到公元 800–900 年，當時一位衣索比亞的牧羊人 Kaldi 發現他的山羊吃了某種灌木的果實後變得精力充沛。他自己嘗試後，發現也有類似效果。一位僧侶注意到這一現象後，採摘了果實並將其碾成粉末，並加入沸水（這可能是第一杯咖啡）。品嚐後，他發現這種飲品可以提神，便將這一發現分享給他的修道院。\n \n
+        僧侶們將這一發現稱為主的恩賜，因為它幫助他們在漫長的祈禱中保持清醒。星巴克於 1971 年加入了咖啡的豐富歷史，並在西雅圖的派克市場開設了第一家門市。\n \n
     </string>
 
     <!-- Order Screen-->
-    <string name="order_screen">Order</string>
-    <string name="checkout">Checkout</string>
-    <string name="currency_symbol">₹ %1$d</string>
-    <string name="order_summary_title">Your Order</string>
+    <string name="order_screen">訂單</string>
+    <string name="checkout">結帳</string>
+    <string name="currency_symbol">NTD %1$d</string>
+    <string name="order_summary_title">您的訂單</string>
     <plurals name="order_summary">
-        <item quantity="one">You have %1$d item in your cart</item>
-        <item quantity="other">You have %1$d items in your cart</item>
+        <item quantity="one">您的購物車中有 %1$d 件商品</item>
+        <item quantity="other">您的購物車中有 %1$d 件商品</item>
     </plurals>
-    <string name="order_success_instruction">You can walk in to the nearest Starbucks store to collect your order</string>
-    <string name="order_success_instruction_qr_code">Please display the QR code at the reception</string>
-    <string name="qr_code_content_description">Order QR code</string>
-    <string name="order_success_btn_text">Order again</string>
-    <string name="order_payment_btn_text">Place Order</string>
-    <string name="order_total_text">Your order total is ₹ %1$d</string>
-    <string name="add_to_cart">Add to cart</string>
-    <string name="starting_from">Starting from</string>
-    <string name="seasonal_special">Our Seasonal special</string>
+    <string name="order_success_instruction">您可以前往最近的星巴克門市領取訂單</string>
+    <string name="order_success_instruction_qr_code">請在櫃檯出示 QR 碼</string>
+    <string name="qr_code_content_description">訂單 QR Code</string>
+    <string name="order_success_btn_text">再次訂購</string>
+    <string name="order_payment_btn_text">提交訂單</string>
+    <string name="order_total_text">您的訂單總金額為 NTD %1$d</string>
+    <string name="add_to_cart">加入購物車</string>
+    <string name="starting_from">起價</string>
+    <string name="seasonal_special">季節限定</string>
 
-    <string name="bill_summary_subtotal">Subtotal</string>
-    <string name="bill_summary_others">Tax and Delivery charges</string>
-    <string name="bill_summary_grand_total">Grand Total</string>
+    <string name="bill_summary_subtotal">小計</string>
+    <string name="bill_summary_others">稅金與運費</string>
+    <string name="bill_summary_grand_total">總金額</string>
 
-    <string name="empty_screen_title">Your cart is empty</string>
-    <string name="empty_screen_btn_text">Order now</string>
+    <string name="empty_screen_title">您的購物車是空的</string>
+    <string name="empty_screen_btn_text">立即訂購</string>
 
-    <string name="back_button">Back button</string>
-    <string name="get_help">Get Help</string>
-    <string name="login">Login</string>
-    <string name="sign_up">Sign up</string>
-    <string name="get_help_description">Please enter your registered details and we will send you an OTP to reset your password</string>
-    <string name="username">USERNAME</string>
-    <string name="username_hint">Enter Email ID or Mobile Number</string>
-    <string name="date_of_birth">DATE OF BIRTH</string>
-    <string name="date_of_birth_hint">DD/MM/YYYY</string>
-    <string name="password">PASSWORD</string>
-    <string name="password_hint">Enter Password</string>
-    <string name="reset_password">Reset Password</string>
-    <string name="start_login_btn">Start Login Icon</string>
-    <string name="landing_img">Landing screen background image</string>
-    <string name="dont_have_an_account">Don\'t have an account ? </string>
-    <string name="facing_trouble">Facing trouble logging in ? </string>
+    <string name="back_button">返回</string>
+    <string name="get_help">我需要幫助</string>
+    <string name="login">登入</string>
+    <string name="sign_up">註冊</string>
+    <string name="get_help_description">請輸入您的註冊資料，我們將發送驗證碼以重設密碼</string>
+    <string name="username">用戶名</string>
+    <string name="username_hint">輸入電子郵件或手機號碼</string>
+    <string name="date_of_birth">出生日期</string>
+    <string name="date_of_birth_hint">日/月/年</string>
+    <string name="password">密碼</string>
+    <string name="password_hint">輸入密碼</string>
+    <string name="reset_password">重設密碼</string>
+    <string name="start_login_btn">開始登入圖示</string>
+    <string name="landing_img">登陸畫面背景圖片</string>
+    <string name="dont_have_an_account">還沒有帳號嗎？</string>
+    <string name="facing_trouble">登入遇到困難？</string>
 
-    <string name="login_to_starbucks">Login To Starbucks</string>
-    <string name="create_password">CREATE PASSWORD</string>
-    <string name="confirm_password">CONFIRM PASSWORD</string>
-    <string name="email_id">EMAIL ID</string>
-    <string name="email_hint">Enter Email ID</string>
-    <string name="confirm_password_hint">Re-enter Password</string>
-    <string name="mobile">MOBILE NUMBER</string>
-    <string name="mobile_hint">Enter Mobile Number</string>
-    <string name="otp_info">We will send an OTP to this Mobile Number for verification</string>
-    <string name="character_constraint">8 characters</string>
-    <string name="continue_btn">Continue</string>
-    <string name="case_constraint">1 uppercase</string>
-    <string name="numeric_constraint">1 Number</string>
-    <string name="symbolic_constraint">1 symbol</string>
-    <string name="otp_sent">OTP was sent to </string>
-    <string name="otp_description">Please enter the OTP you have received on your registered Mobile Number</string>
-    <string name="enter_otp">ENTER OTP</string>
-    <string name="time_remaining">Time Remaining</string>
-    <string name="didnt_receive_otp">Didn\'t receive OTP? </string>
-    <string name="resend">Resend</string>
-    <string name="confirm">Confirm</string>
-    <string name="create_an_account">Create An Account</string>
-    <string name="personal_details">Personal Details</string>
-    <string name="verification">Verification</string>
-    <string name="registration_success">Registered successfully</string>
-    <string name="firstname">FIRST NAME*</string>
-    <string name="lastname">LAST NAME*</string>
-    <string name="birthdate">BIRTH DATE*</string>
-    <string name="firstname_hint">Enter First Name</string>
-    <string name="lastname_hint">Enter Last Name</string>
-    <string name="personal_details_form_title">ONE FINAL STEP, TELL US A LITTLE ABOUT YOU</string>
-    <string name="birthdate_info_text">Share your birthday to receive a reward during that month. It cannot be changed after submission.</string>
-    <string name="got_a_referral_code">Got a referral code</string>
-    <string name="referral_code_hint">Enter referral code for special rewards</string>
-    <string name="enter_referral_code">Enter Code</string>
+    <string name="login_to_starbucks">登入星巴克</string>
+    <string name="create_password">創建密碼</string>
+    <string name="confirm_password">確認密碼</string>
+    <string name="email_id">電子郵件</string>
+    <string name="email_hint">輸入電子郵件</string>
+    <string name="confirm_password_hint">再次輸入密碼</string>
+    <string name="mobile">手機號碼</string>
+    <string name="mobile_hint">輸入手機號碼</string>
+    <string name="otp_info">我們將發送驗證碼到此手機號碼以進行驗證</string>
+    <string name="character_constraint">8 個字符</string>
+    <string name="continue_btn">繼續</string>
+    <string name="case_constraint">1 個大寫字母</string>
+    <string name="numeric_constraint">1 個數字</string>
+    <string name="symbolic_constraint">1 個符號</string>
+    <string name="otp_sent">驗證碼已發送到</string>
+    <string name="otp_description">請輸入您註冊的手機號碼收到的驗證碼</string>
+    <string name="enter_otp">輸入驗證碼</string>
+    <string name="time_remaining">剩餘時間</string>
+    <string name="didnt_receive_otp">沒有收到驗證碼？</string>
+    <string name="resend">重新發送</string>
+    <string name="confirm">確認</string>
+    <string name="create_an_account">創建帳號</string>
+    <string name="personal_details">個人資料</string>
+    <string name="verification">驗證</string>
+    <string name="registration_success">註冊成功</string>
+    <string name="firstname">名字*</string>
+    <string name="lastname">姓氏*</string>
+    <string name="birthdate">出生日期*</string>
+    <string name="firstname_hint">輸入名字</string>
+    <string name="lastname_hint">輸入姓氏</string>
+    <string name="personal_details_form_title">最後一步，請告訴我們一些關於您的資訊</string>
+    <string name="birthdate_info_text">提供您的生日資訊，您將在該月份收到獎勵。提交後無法更改。</string>
+    <string name="got_a_referral_code">有推薦碼嗎？</string>
+    <string name="referral_code_hint">輸入推薦碼可以獲得特別獎勵</string>
+    <string name="enter_referral_code">輸入推薦碼</string>
 
-    <string name="starbucks_version">Starbucks Version</string>
-    <string name="logout">LOGOUT</string>
-    <string name="referral">Refer and Earn Stars</string>
-    <string name="referral_description">Starbucks is best when it\'s shared. Invite your loved ones and get one bonus star on each registration.</string>
-    <string name="share_invite">Share invite code</string>
-    <string name="communication_preference_heading">Please tell us your preferred mode of communication</string>
-    <string name="sms">SMS</string>
-    <string name="email">E-Mail</string>
-    <string name="where_shall_we_reach_you">Where shall we reach you?</string>
-    <string name="agreement">By joining, I agree to the Terms &amp; Conditions.</string>
+    <string name="starbucks_version">星巴克軟體版本</string>
+    <string name="logout">登出</string>
+    <string name="referral">推薦並賺取星星</string>
+    <string name="referral_description">別忘了分享星巴克。邀請一次，每次註冊可獲得一顆星星獎勵。</string>
+    <string name="share_invite">分享邀請碼</string>
+    <string name="communication_preference_heading">請告訴我們您偏好的溝通方式</string>
+    <string name="sms">簡訊</string>
+    <string name="email">電子郵件</string>
+    <string name="where_shall_we_reach_you">我們應如何聯繫您？</string>
+    <string name="agreement">加入即表示我同意條款和條件。</string>
 
-    <string name="app_permissions">App permissions</string>
-    <string name="preferences_terms">PREFERENCES &amp; TERMS</string>
-    <string name="quick_login">Quick Login</string>
-    <string name="legal">Legal</string>
-    <string name="account">Account</string>
-    <string name="change_password">Change Password</string>
-    <string name="request_account_deletion">Request Account Deletion</string>
-    <string name="terms_conditions">Terms and Conditions</string>
-    <string name="location">Location</string>
-    <string name="finger_print_icon">Finger Print Icon</string>
-    <string name="set_pin">Set 4 digit pin</string>
-    <string name="set_device_lock">Enable device lock</string>
-    <string name="set_device_lock_description">Use your current device lock</string>
-    <string name="pin_description">Create a starbucks pin so that only you can access / Pay with your phone</string>
-    <string name="password_toggle_icon">Password Toggle icon</string>
-    <string name="finish_sign_up">Finish Sign Up</string>
-
+    <string name="app_permissions">應用程式權限</string>
+    <string name="preferences_terms">偏好與條款</string>
+    <string name="quick_login">快速登入</string>
+    <string name="legal">法律條款</string>
+    <string name="account">帳號</string>
+    <string name="change_password">更改密碼</string>
+    <string name="request_account_deletion">請求刪除帳號</string>
+    <string name="terms_conditions">條款和條件</string>
+    <string name="location">位置</string>
+    <string name="finger_print_icon">指紋圖示</string>
+    <string name="set_pin">設定 4 位數 PIN 碼</string>
+    <string name="set_device_lock">啟用裝置鎖</string>
+    <string name="set_device_lock_description">使用您當前的裝置鎖</string>
+    <string name="pin_description">創建星巴克 PIN 碼，確保只有您能使用手機進行支付</string>
+    <string name="password_toggle_icon">密碼顯示切換圖示</string>
+    <string name="finish_sign_up">完成註冊</string>
 </resources>
+
