@@ -1,3 +1,6 @@
+<!-- 於此可以更改專案中絕大部分文字(改語言) -->
+<!-- 提示使用ctrl + shift + f 可以直接針對文字做查找，會很快 -->
+
 <resources>
     <string name="app_name">星巴克StarBucks</string>
     <string name="go_back">返回按鈕</string>
@@ -73,7 +76,9 @@
     <string name="seasonal_special">季節限定</string>
 
     <string name="bill_summary_subtotal">小計</string>
-    <string name="bill_summary_others">稅金與運費</string>
+
+    <!-- 因業務需求，所以不使用稅金與運費 -->
+    <!-- <string name="bill_summary_others">稅金與運費</string> -->
     <string name="bill_summary_grand_total">總金額</string>
 
     <string name="empty_screen_title">您的購物車是空的</string>

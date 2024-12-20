@@ -10,6 +10,8 @@ import kotlinx.coroutines.flow.flow
 class HomeRepoImpl : HomeRepository {
     override fun fetchCarouselItems(): Flow<List<DMCarouselItem>> {
         val dmCarouselItemList = listOf(
+
+            /* 以下的註解，是因為該分類項內容為空或少所致，故刪除之 */
             DMCarouselItem(
                 1,
                 "不可抗拒的水果美味",
@@ -70,10 +72,10 @@ class HomeRepoImpl : HomeRepository {
                 Constants.FRAPPUCCINO,
                 "https://iili.io/ZNxu87.png"
             ),
-            DMPopularMenuItem(
-                Constants.BOTTLED_DRINKS,
-                "https://iili.io/ZNxXAF.png"
-            ),
+//            DMPopularMenuItem(
+//                Constants.BOTTLED_DRINKS,
+//                "https://iili.io/ZNxXAF.png"
+//            ),
             DMPopularMenuItem(
                 Constants.BAKERY,
                 "https://iili.io/ZNxLP4.png"
@@ -82,18 +84,18 @@ class HomeRepoImpl : HomeRepository {
                 Constants.DESERTS,
                 "https://iili.io/ZNzIWJ.png"
             ),
-            DMPopularMenuItem(
-                Constants.SALADS,
-                "https://iili.io/ZNzaRt.png"
-            ),
+//            DMPopularMenuItem(
+//                Constants.SALADS,
+//                "https://iili.io/ZNzaRt.png"
+//            ),
             DMPopularMenuItem(
                 Constants.PACKED_FOODS,
                 "https://iili.io/ZNzGsf.png"
             ),
-            DMPopularMenuItem(
-                Constants.CROISSANT,
-                "https://iili.io/ZNz6dB.png"
-            )
+//            DMPopularMenuItem(
+//                Constants.CROISSANT,
+//                "https://iili.io/ZNz6dB.png"
+//            )
         )
         return flow {
             emit(popularMenuItemsList)

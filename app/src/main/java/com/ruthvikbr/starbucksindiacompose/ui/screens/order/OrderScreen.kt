@@ -117,7 +117,7 @@ fun OrderScreen(
                     cartItems.size,
                     cartItems.size,
                 ),
-                buttonText = "Checkout",
+                buttonText = "結帳",
                 onCheckoutClicked = { composeNavigator.navigate(StarbucksScreen.Checkout.route) },
             )
         },

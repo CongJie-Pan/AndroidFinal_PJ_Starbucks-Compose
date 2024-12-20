@@ -45,12 +45,14 @@ fun PaymentOptions(
             .background(PrimaryWhite)
             .padding(16.dp)
     ) {
-        PaymentOption(
+        /*PaymentOption(
+            // 在台灣沒有人使用這個支付系統，所以棄之。
+
             label = OrderPaymentOptions.PhonePe.label,
             imageId = OrderPaymentOptions.PhonePe.imageId,
             onPaymentStatusUpdate = onPaymentStatusUpdate,
             selectedPaymentMode
-        )
+        )*/
         PaymentOption(
             label = OrderPaymentOptions.GooglePay.label,
             imageId = OrderPaymentOptions.GooglePay.imageId,

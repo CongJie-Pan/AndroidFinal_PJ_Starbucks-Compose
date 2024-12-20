@@ -9,12 +9,12 @@ data class ProfileMenuItem(
 
 object ProfileMenuItemsList {
     val items = listOf(
-        ProfileMenuItem("Starbucks Rewards", R.drawable.rewards),
-        ProfileMenuItem("Orders", R.drawable.coffee),
-        ProfileMenuItem("Starbucks Pay", R.drawable.credit),
-        ProfileMenuItem("Other Payment Modes", R.drawable.other_payment),
-        ProfileMenuItem("Help Center", R.drawable.help_center),
-        ProfileMenuItem("Saved Articles and News", R.drawable.saved),
-        ProfileMenuItem("Rate Us On The Play Store", R.drawable.playstore),
+        ProfileMenuItem("星禮程Starbucks® Rewards", R.drawable.rewards),
+        ProfileMenuItem("訂單", R.drawable.coffee),
+        ProfileMenuItem("星巴克支付", R.drawable.credit),
+        ProfileMenuItem("其他付款方式", R.drawable.other_payment),
+        ProfileMenuItem("幫助中心", R.drawable.help_center),
+        ProfileMenuItem("已保存的文章與新聞", R.drawable.saved),
+        ProfileMenuItem("在 Play 商店為我們評分", R.drawable.playstore),
     )
 }

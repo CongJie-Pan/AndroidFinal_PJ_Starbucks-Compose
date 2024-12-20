@@ -46,13 +46,13 @@ class StarbucksDaoTest {
             200,
             "sampleurl",
             "sample description",
-            "Hot Coffee",
+            "Hot coffee",
             1
         )
 
         database.starbucksDao().insertOrderItem(orderItem)
 
-        val tasks = database.starbucksDao().getOrderItems("Hot Coffee")
+        val tasks = database.starbucksDao().getOrderItems("Hot coffee")
 
         assert(tasks.first().contains(orderItem))
     }
@@ -65,7 +65,7 @@ class StarbucksDaoTest {
             200,
             "sampleurl",
             "sample description",
-            "Hot Coffee",
+            "Hot coffee",
             1
         )
 
@@ -75,7 +75,7 @@ class StarbucksDaoTest {
 
         database.starbucksDao().updateOrderItem(updateOrderItem)
 
-        val tasks = database.starbucksDao().getOrderItems("Hot Coffee")
+        val tasks = database.starbucksDao().getOrderItems("Hot coffee")
 
         assert(tasks.first().contains(updateOrderItem))
         assert(tasks.first()[0].itemDescription == "Sample description")
@@ -89,17 +89,17 @@ class StarbucksDaoTest {
             200,
             "sampleurl",
             "sample description",
-            "Hot Coffee",
+            "Hot coffee",
             1
         )
 
         database.starbucksDao().insertOrderItem(orderItem)
 
-        val tasks = database.starbucksDao().getOrderItems("Hot Coffee")
+        val tasks = database.starbucksDao().getOrderItems("Hot coffee")
         assert(tasks.first().contains(orderItem))
 
         database.starbucksDao().deleteOrderItem(orderItem)
-        val tasksAfterDeletion = database.starbucksDao().getOrderItems("Hot Coffee")
+        val tasksAfterDeletion = database.starbucksDao().getOrderItems("Hot coffee")
 
         assert(!tasksAfterDeletion.first().contains(orderItem))
     }
@@ -112,7 +112,7 @@ class StarbucksDaoTest {
             200,
             "sampleurl",
             "sample description",
-            "Hot Coffee",
+            "Hot coffee",
             1
         )
 
@@ -130,7 +130,7 @@ class StarbucksDaoTest {
             200,
             "sampleurl",
             "sample description",
-            "Hot Coffee",
+            "Hot coffee",
             1
         )
         val orderItem2 = OrderItem(
@@ -139,7 +139,7 @@ class StarbucksDaoTest {
             200,
             "sampleurl",
             "sample description",
-            "Hot Coffee",
+            "Hot coffee",
             2
         )
 
@@ -159,7 +159,7 @@ class StarbucksDaoTest {
             200,
             "sampleurl",
             "sample description",
-            "Hot Coffee",
+            "Hot coffee",
             1
         )
         val orderItem2 = OrderItem(
@@ -168,7 +168,7 @@ class StarbucksDaoTest {
             200,
             "sampleurl",
             "sample description",
-            "Hot Coffee",
+            "Hot coffee",
             2
         )
 

@@ -39,14 +39,14 @@ fun OrderProcessingScreen(composeNavigator: ComposeNavigator) {
 
     var fillCup by rememberSaveable { mutableStateOf(false) }
     var orderStatusText by remember {
-        mutableStateOf("Your order is being processed")
+        mutableStateOf("您的訂單正在處理中")
     }
     val pY by animateFloatAsState(
         targetValue = if (fillCup) 0.4f else 0.64f,
         animationSpec = tween(durationMillis = 2500),
         finishedListener = {
             coroutineScope.launch {
-                orderStatusText = "Your order has been placed successfully"
+                orderStatusText = "已成功下單 ! "
                 delay(500L)
                 composeNavigator.navigate(StarbucksScreen.OrderSuccess.route)
             }

@@ -36,12 +36,12 @@ fun ProfileAppBar(
     ) {
         Icon(
             Icons.Filled.KeyboardArrowLeft,
-            contentDescription = "Back Button",
+            contentDescription = "返回",
             Modifier.weight(1f).clickable { onBackButtonClicked() },
             tint = PrimaryWhite,
         )
         Text(
-            text = "Account",
+            text = "帳號", // Account
             Modifier.weight(3f),
             textAlign = TextAlign.Center,
             style = MaterialTheme.typography.body1.copy(
@@ -51,13 +51,13 @@ fun ProfileAppBar(
         )
         Icon(
             Icons.Outlined.Notifications,
-            contentDescription = "Notifications Button",
+            contentDescription = "訊息",
             Modifier.weight(0.5f).clickable { onNotificationsButtonClicked() },
             tint = PrimaryWhite,
         )
         Icon(
             Icons.Outlined.Settings,
-            contentDescription = "Settings Button",
+            contentDescription = "設定",
             Modifier.weight(0.5f).clickable { onSettingsButtonClicked() },
             tint = PrimaryWhite,
         )

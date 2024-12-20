@@ -62,7 +62,7 @@ fun SeasonSpecialCard() {
                     color = PrimaryWhite,
                 )
                 Text(
-                    text = "Iced frappuccino",
+                    text = "星冰樂", // Iced frappuccino
                     style = MaterialTheme.typography.h4,
                     color = PrimaryWhite,
                 )

@@ -14,6 +14,7 @@ object BottomNavigationItems {
         NavigationItem("主頁", R.drawable.ic_home, StarbucksScreen.Home.route),
         NavigationItem("我要訂餐", R.drawable.ic_coffee, StarbucksScreen.Order.name),
         NavigationItem("個人資料", R.drawable.ic_person, StarbucksScreen.Profile.route),
-        NavigationItem("店家", R.drawable.ic_store, StarbucksScreen.Stores.route),
+        // 因為專案業務需求，暫時移除店家頁面
+        //NavigationItem("店家", R.drawable.ic_store, StarbucksScreen.Stores.route),
     )
 }

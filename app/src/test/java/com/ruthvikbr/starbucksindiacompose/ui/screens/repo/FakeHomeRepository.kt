@@ -23,7 +23,7 @@ class FakeHomeRepository : HomeRepository {
     override fun fetchPopularMenuItems(): Flow<List<DMPopularMenuItem>> {
         return flowOf(
             listOf(
-                DMPopularMenuItem("Hot Coffee", "Sample img1"),
+                DMPopularMenuItem("Hot coffee", "Sample img1"),
                 DMPopularMenuItem("Hot Tea", "Sample img2"),
                 DMPopularMenuItem("Cold Coffee", "Sample img3")
             )

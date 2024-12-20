@@ -36,7 +36,8 @@ fun OrderBillSummary(billSummary: BillSummary) {
             .padding(16.dp)
     ) {
         BillSummaryItem(value = billSummary.cartTotal, label = stringResource(id = R.string.bill_summary_subtotal))
-        BillSummaryItem(value = billSummary.tax, label = stringResource(id = R.string.bill_summary_others))
+        /* 因業務需求，所以不使用稅金與運費 */
+        //BillSummaryItem(value = billSummary.tax, label = stringResource(id = R.string.bill_summary_others))
         BillSummaryItem(
             value = billSummary.grandTotal,
             label = stringResource(id = R.string.bill_summary_grand_total),

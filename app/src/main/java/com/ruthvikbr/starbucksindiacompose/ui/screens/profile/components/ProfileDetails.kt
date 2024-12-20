@@ -24,10 +24,10 @@ fun ProfileDetails() {
     ) {
         ProfilePicture()
         SpacerComponent(spaceInDp = 16.dp)
-        Text(text = "Ruthvik B.R", style = MaterialTheme.typography.h2, color = PrimaryWhite)
+        Text(text = "Account Name", style = MaterialTheme.typography.h2, color = PrimaryWhite)
         SpacerComponent(spaceInDp = 4.dp)
         Text(
-            text = "Welcome Tier",
+            text = "Welcome (Account Name)",
             style = MaterialTheme.typography.h4.copy(fontWeight = FontWeight.Normal),
             color = PrimaryWhite,
         )
