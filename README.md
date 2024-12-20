@@ -1,59 +1,123 @@
-<h1 align=center>Starbucks Compose</h1>
+# 專案架構目錄與UI設定事項
 
-<h3 align=center>Overview</h3>
-<p align=center>A Jetpack compose clone of the Starbucks India mobile app. The purpose of this app is to build an android app using the Modern Android Development practices such as Jetpack Compose , Clean Architecture and also to build the app following the design principles mentioned in the official starbucks <a href="https://creative.starbucks.com/">Design guide</a></p>
+```
+project-root/
+├── .github/
+│   └── PULL_REQUEST_TEMPLATE.md  # Pull Request 的模板文件
+├── .gitignore  # 定義哪些文件和目錄應該被 Git 忽略
+├── .gradle/
+│   ├── config.properties  # Gradle 配置文件
+│   └── file-system.probe  # 用於檢測文件系統的文件
+├── .idea/
+│   ├── workspace.xml  # 保存工作區設置
+│   ├── modules.xml  # 保存模組設置
+│   └── misc.xml  # 保存其他設置
+├── app/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/example/app/
+│   │   │   │       ├── MainActivity.java  # 應用程式的主要活動
+│   │   │   │       └── App.java  # 應用程式的入口點
+│   │   │   ├── kotlin/
+│   │   │   │   └── com/example/app/
+│   │   │   │       ├── MainActivity.kt  # 應用程式的主要活動 (Kotlin)
+│   │   │   │       └── App.kt  # 應用程式的入口點 (Kotlin)
+│   │   │   └── res/
+│   │   │       ├── layout/
+│   │   │       │   └── activity_main.xml  # 主活動的佈局文件
+│   │   │       └── values/
+│   │   │           ├── strings.xml  # 字串資源文件
+│   │   │           └── colors.xml  # 顏色資源文件
+│   │   └── test/
+│   │       └── java/
+│   │           └── com/example/app/
+│   │               └── MainActivityTest.java  # 主活動的測試類
+│   ├── build.gradle.kts  # 應用程式模組的 Gradle 構建腳本
+│   └── proguard-rules.pro  # ProGuard 混淆規則文件
+├── build/  # 專案的構建輸出目錄
+├── buildSrc/
+│   └── src/
+│       └── main/
+│           └── kotlin/
+│               └── Deps.kt  # 定義專案中使用的所有依賴項
+├── data/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/example/data/
+│   │   │   │       ├── Repository.java  # 數據倉庫類
+│   │   │   │       └── DataSource.java  # 數據源類
+│   │   │   ├── kotlin/
+│   │   │   │   └── com/example/data/
+│   │   │   │       ├── Repository.kt  # 數據倉庫類 (Kotlin)
+│   │   │   │       └── DataSource.kt  # 數據源類 (Kotlin)
+│   │   └── test/
+│   │       ├── java/
+│   │       │   └── com/example/data/
+│   │       │       └── RepositoryTest.java  # 數據倉庫的測試類
+│   │       └── kotlin/
+│   │           └── com/example/data/
+│   │               └── RepositoryTest.kt  # 數據倉庫的測試類 (Kotlin)
+│   ├── build.gradle.kts  # 數據層模組的 Gradle 構建腳本
+│   └── proguard-rules.pro  # ProGuard 混淆規則文件
+├── domain/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/example/domain/
+│   │   │   │       ├── UseCase.java  # 用例類
+│   │   │   │       └── Model.java  # 模型類
+│   │   │   ├── kotlin/
+│   │   │   │   └── com/example/domain/
+│   │   │   │       ├── UseCase.kt  # 用例類 (Kotlin)
+│   │   │   │       └── Model.kt  # 模型類 (Kotlin)
+│   │   └── test/
+│   │       ├── java/
+│   │       │   └── com/example/domain/
+│   │       │       └── UseCaseTest.java  # 用例的測試類
+│   │       └── kotlin/
+│   │           └── com/example/domain/
+│   │               └── UseCaseTest.kt  # 用例的測試類 (Kotlin)
+│   ├── build.gradle.kts  # 領域層模組的 Gradle 構建腳本
+├── gradle/
+│   └── wrapper/
+│       └── gradle-wrapper.properties  # Gradle Wrapper 的配置文件
+├── navigation/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/example/navigation/
+│   │   │   │       └── Navigator.java  # 導航類
+│   │   │   ├── kotlin/
+│   │   │   │   └── com/example/navigation/
+│   │   │   │       └── Navigator.kt  # 導航類 (Kotlin)
+│   │   └── test/
+│   │       ├── java/
+│   │       │   └── com/example/navigation/
+│   │       │       └── NavigatorTest.java  # 導航類的測試類
+│   │       └── kotlin/
+│   │           └── com/example/navigation/
+│   │               └── NavigatorTest.kt  # 導航類的測試類 (Kotlin)
+│   ├── build.gradle.kts  # 導航模組的 Gradle 構建腳本
+│   └── proguard-rules.pro  # ProGuard 混淆規則文件
+├── README.md  # 專案的說明文件
+├── settings.gradle.kts  # 定義專案的模組和包含的構建腳本
+├── gradle.properties  # 配置專案的全局屬性，如 JVM 參數和 AndroidX 設置
+├── gradlew  # 用於在 Unix 系統上執行 Gradle 構建的腳本
+└── gradlew.bat  # 用於在 Windows 系統上執行 Gradle 構建的腳本
+```
+---
+### UI Setting 資料夾
 
-<br/>
+**該資料夾內的檔案用GPT做詳細中文註解，了解業務。**
 
-## Stack
+**或許可以問作者，可以在哪裡修改 ?**
 
-| Tools | Link | Version |
-|     :---:      |   :---: | :---:|
-| Kotlin | [Kotlin](https://kotlinlang.org) | <img src="https://img.shields.io/badge/Kotlin-1.7.0-blue" /> |
-| Jetpack Compose | [Jetpack Compose](https://developer.android.com/jetpack/compose) | <img src="https://img.shields.io/badge/Jetpack%20Compose-1.2.0-brightgreen" /> |
-| Dagger Hilt | [Dagger Hilt](https://developer.android.com/training/dependency-injection/hilt-android) | <img src="https://img.shields.io/badge/Dagger%20Hilt-2.43-red" /> |
-| Material Design | [Material Design](https://developer.android.com/jetpack/androidx/releases/compose-material) | <img src="https://img.shields.io/badge/Compose%20Material-1.2.0-blue" /> |
-| Coroutines | [Coroutines](https://kotlinlang.org/docs/coroutines-guide.html) | <img src="https://img.shields.io/badge/Coroutines%20-1.6.0-yellow" /> |
-| Architecture Components | [Android Architecture Components](https://developer.android.com/topic/libraries/architecture) |  |
-
-## Screenshots
-
-<table style="width:100%">
-  <tr>
-    <th>Splash</th>
-    <th>Signup</th>
-    <th>Login</th>
-  </tr>
-  <tr>
-    <td><img src = "https://user-images.githubusercontent.com/37804253/210037900-d31ad2a0-c7fc-4ef1-b00e-5b7634ec0b45.png" width=240 height=500/></td>
-    <td><img src = "https://user-images.githubusercontent.com/37804253/220575879-2d84ad82-4023-4bd6-9cd3-e4d11de6587f.gif" width=240 height=500/></td>
-    <td><img src = "https://user-images.githubusercontent.com/37804253/220575834-e7092ee7-a14e-47ba-a617-7a8ef3af3bfb.gif" width=240 height=500/></td>
-  </tr>
-  <tr>
-    <th>Home</th>
-    <th>Order</th>
-    <th>Profile</th>
-  </tr>
-  <tr>
-    <td><img src = "https://user-images.githubusercontent.com/37804253/210037894-918d91e9-65d8-4594-8451-7fb63f31cea6.jpg" width=240 height=500/></td>
-    <td><img src = "https://user-images.githubusercontent.com/37804253/210132247-38084a7e-c5b9-49bd-8f5d-e477399d4645.gif" width=240 height=500/></td>
-    <td><img src = "https://user-images.githubusercontent.com/37804253/218002459-d848a448-1c91-4261-9fc0-dee24f1d52a5.png" width=240 height=500/></td>
-  </tr>
-  <tr>
-    <th>Settings</th>
-    <th>Get Help</th>
-  </tr>
-  <tr>
-    <td><img src = "https://user-images.githubusercontent.com/37804253/218139167-9f2360e7-08d8-4ceb-94a0-6d333ebde120.gif" width=240 height=500/></td>
-    <td><img src = "https://user-images.githubusercontent.com/37804253/220557466-ebde662b-fd21-474f-aee4-f6bd1785bb3d.png" width=240 height=500/></td>
-  </tr>
-</table>
-
-## Inspiration
-
-[Discord Compose clone by Anmol Verma](https://github.com/Anmol92verma/DiscordJetpackCompose)
-
-
-
-
-
+---
+- app/build/generated/source/kapt/debug/com/ruthvikbr/starbucksindiacompose/ui
+- navigation/src/main/java
+- app/src/main/java/com/ruthvikbr/starbucksindiacompose/ui
+---
+### UI 顯示主要語言字更改處:
+app/src/main/res/values/strings.xml
