@@ -57,7 +57,7 @@ class OrderViewModelTest {
                     200,
                     "sample img url",
                     "Sample desc 1",
-                    "Hot coffee",
+                    "熱咖啡",
                     1L
                 ),
                 DMOrderItem(
@@ -66,7 +66,7 @@ class OrderViewModelTest {
                     200,
                     "sample img url",
                     "Sample desc 2",
-                    "Hot coffee",
+                    "熱咖啡",
                     2L
                 )
             ),

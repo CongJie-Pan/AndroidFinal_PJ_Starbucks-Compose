@@ -12,34 +12,35 @@ class HomeRepoImpl : HomeRepository {
         val dmCarouselItemList = listOf(
             DMCarouselItem(
                 1,
-                "Irresistible Fruitilicious delights",
+                "不可抗拒的水果美味",
                 "https://iili.io/UHRSfV.jpg",
-                "Bringing you a delectable range of Fruit beverages!"
+                "為您帶來一系列美味可口的水果飲料！"
             ),
             DMCarouselItem(
                 2,
-                "Starbucks on Tata Cliq",
+                "Starbucks 登陸 Tata Cliq",
                 "https://iili.io/UH7hZb.jpg",
-                "An exquisite range of essentials from Starbucks*! \n Choose from the versatile collection"
+                "來自 Starbucks* 的精選必需品系列，任您挑選！"
             ),
             DMCarouselItem(
                 3,
-                "Grapiest Beverages at your nearest Starbucks",
+                "最葡萄的飲品就在您附近的 Starbucks",
                 "https://iili.io/UH7wnj.jpg",
-                "Bringing you a delectable range of Fruit beverages!"
+                "為您帶來一系列美味可口的水果飲料！"
             ),
             DMCarouselItem(
                 4,
-                "Celebrate your special day",
+                "慶祝您的特別日子",
                 "https://iili.io/UH7NMx.jpg",
-                "With the Starbucks-India mobile app now you can avail a free tall beverage of your choice for free in your birthday month at your nearest Starbucks"
+                "使用 Starbucks-India 行動應用程式，您可以在生日月份於最近的 Starbucks 免費享用一杯中杯飲料。"
             ),
             DMCarouselItem(
                 5,
-                "Coffee Heaven",
+                "咖啡天堂",
                 "https://iili.io/UH7O6Q.jpg",
-                "Get the Mocha cookie crumble frappuccino at your doorstep via Zomato and Swiggy"
+                "通過 Zomato 和 Swiggy 將 Mocha Cookie Crumble Frappuccino 送到您家門口。"
             )
+
 
         )
         return flow {
@@ -103,27 +104,27 @@ class HomeRepoImpl : HomeRepository {
         val starbucksNewsList = listOf(
             DMSocialNewsItem(
                 "https://iili.io/t8XPbn.png",
-                "Starbucks",
-                "Tata Starbucks Private Limited has announced the launch of a new store in the capital city of Uttarakhand, Dehradun in September 2022. The new state entry demonstrates the company's commitment in strategically expanding its stores in India, where it now serves across 35 cities and 300 stores. Located at Rajpur road, the new store will offer the city’s residents with a new spot to connect over their favorite cup of coffee while experiencing the iconic Starbucks Experience.\n" +
-                    "\n" +
-                    "“Tata Starbucks has had an incredible journey in India, and we are honoured to celebrate our 10th year by creating a welcoming Third Place experience for Dehradun’s discerning customers and vibrant communities. As we expand into new markets, our goal is to provide every customer with the distinctive Starbucks experience.” said Sushant Dash, ceo, Tata Starbucks Pvt. Ltd.\n" +
-                    "\n" +
-                    "Inspired by Dehradun's heritage and local architecture, the overall ambience of both stores is rustic yet modern. The unique high ceiling and arched windows give the space a chalet like feel. The warm terracotta floor tiles and wall paneling playfully interacts with the light and shadow cast by the surrounding environment. The vibrant custom tapestry is a celebration of nature with delicate touches from flora and fauna of the coffee world.\n" +
-                    "\n" +
-                    "The new store will offer Starbucks signature beverages and food options including the all-time favourites such as Java Chip Frappuccino®, Cafe Mocha, Signature Hot Chocolate and Caramel Macchiato. Customers can also enjoy the limited-time Autumn offerings like Pumpkin Spice Latte, Pumkin Spice Frappuccino® and Hazelnut Mocha Cheesecake Frappuccino®, Hazelnut Mocha Cheesecake Latte and As an accompaniment to the array of coffee offerings, a range of delectable food items such as the Egg White & Chicken in Multigrain Croissant, Dutch Truffle Gateau, Red Velvet & Orange Cake, Chilli Cheese Toast, Basil Tomato & Mozzarella Cheese Sandwich, Butter Croissant, Kakori Kebab Wrap etc. can also be enjoyed by the customers.\n" +
-                    "\n" +
-                    "Exclusive Starbucks merchandise and free Wi-Fi is also available at the stores. In addition, the company will bring My Starbucks Rewards™ loyalty program to the city, which provides members with rewards and personalized benefits as they make Starbucks a part of their daily lives."
+                "星巴克",
+                "塔塔星巴克私人有限公司宣布於 2022 年 9 月在北阿坎德邦首府德拉敦開設新店。這次進軍新州彰顯了公司致力於在印度戰略性擴展其門店的承諾，目前星巴克在印度 35 個城市擁有 300 家門店。新店位於 Rajpur Road，為城市居民提供一個新的聚會場所，在享受標誌性的星巴克體驗的同時，共享他們最喜愛的一杯咖啡。\n" +
+                        "\n" +
+                        "“塔塔星巴克在印度有著令人難以置信的旅程，我們很榮幸在慶祝我們 10 週年之際，為德拉敦的挑剔顧客和充滿活力的社區創造一個溫馨的第三空間體驗。隨著我們擴展到新市場，我們的目標是為每位顧客提供獨特的星巴克體驗。” 塔塔星巴克私人有限公司執行長 Sushant Dash 表示。\n" +
+                        "\n" +
+                        "受德拉敦的遺產和當地建築啟發，兩家門店的整體氛圍既鄉村又現代。獨特的高天花板和拱形窗戶給空間帶來小木屋的感覺。溫暖的紅陶地板磚和牆面板與周圍環境投射的光影有趣地互動。充滿活力的定制掛毯慶祝自然，並融入了咖啡世界的植物和動物元素。\n" +
+                        "\n" +
+                        "新店將提供星巴克標誌性飲品和食品選擇，包括 Java Chip Frappuccino®、咖啡摩卡、招牌熱巧克力和焦糖瑪奇朵等經典之選。顧客還可以享用限時秋季特選，如南瓜香料拿鐵、南瓜香料星冰樂®、榛果摩卡起司蛋糕星冰樂®、榛果摩卡起司蛋糕拿鐵等。作為多種咖啡選項的搭配，還有一系列美味食品可供顧客享用，如全麥雞肉蛋白可頌、荷蘭松露蛋糕、紅絲絨與橙味蛋糕、辣起司吐司、羅勒番茄馬蘇里拉起司三明治、奶油可頌、卡克里烤肉捲等。\n" +
+                        "\n" +
+                        "門店還提供專屬星巴克商品和免費 Wi-Fi。此外，公司還將在城市推出“我的星巴克獎勵™”忠誠計劃，該計劃為會員提供獎勵和個性化福利，讓星巴克成為他們日常生活的一部分。"
             ),
             DMSocialNewsItem(
                 "https://iili.io/t8h0mX.png",
-                "10th Year Anniversary",
-                "Tata Starbucks is celebrating its 10th anniversary.\n" +
-                    "\n" +
-                    "After 10 years of brewing, serving, and creating the best possible coffee experience, Starbucks India celebrates its momentous 10th anniversary in India. Having built a strong community of customers and partners over the last decade, Starbucks India is certainly on a mission of growth and expansion to observe several more milestone moments.\n" +
-                    "\n" +
-                    "Commemorating this special occasion, Starbucks India invited its patrons to participate in the campaign #BrewYourOwnStarbucks. As an extension of their community culture, they aim to build a deeper connection with this initiative by shining the spotlight on their customers.\n" +
-                    "\n" +
-                    "Whether they take pride in being a coffee connoisseur, enjoy experimenting with their brews, or simply love a good cup of coffee, each customer was invited to craft their dream beverage. Building their own recipe, they were encouraged to share it with the brand and some were featured on the Starbucks India menu which you can spot in some of our stores."
+                "10 週年紀念",
+                "塔塔星巴克正在慶祝其成立 10 週年。\n" +
+                        "\n" +
+                        "經過 10 年的精心沖泡、服務和創造最佳咖啡體驗，星巴克印度慶祝其具有歷史意義的 10 週年。過去十年，星巴克印度已建立了強大的顧客和合作夥伴社群，並且確實正致力於觀察更多里程碑時刻的增長和擴展使命。\n" +
+                        "\n" +
+                        "為紀念這一特殊時刻，星巴克印度邀請其顧客參與#BrewYourOwnStarbucks 活動。作為其社區文化的延伸，他們旨在通過這項倡議加深與顧客的聯繫，將焦點放在他們的顧客身上。\n" +
+                        "\n" +
+                        "無論他們是否為咖啡品鑑家感到自豪，喜歡與咖啡飲品做實驗，還是單純喜愛一杯好咖啡，每位顧客都被邀請打造他們夢想中的飲品。通過創建自己的食譜，他們被鼓勵與品牌分享，有些甚至被列入星巴克印度的菜單，並可以在部分門店中看到。"
             )
         )
 
@@ -131,4 +132,5 @@ class HomeRepoImpl : HomeRepository {
             emit(starbucksNewsList)
         }
     }
+
 }

@@ -18,20 +18,20 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(
+open class HomeViewModel @Inject constructor(
     private val fetchCarouselItemsUseCase: FetchCarouselItemsUseCase,
     private val fetchPopularMenuItemsUseCase: FetchPopularMenuItemsUseCase,
     private val fetchStarbucksNewsItemsUseCase: FetchStarbucksNewsItemsUseCase
 ) : ViewModel() {
     private val _carouselItemList = MutableStateFlow<Flow<List<DMCarouselItem>>>(emptyFlow())
-    val carouselItemList = _carouselItemList.asStateFlow()
+    open val carouselItemList = _carouselItemList.asStateFlow()
 
     private val _popularMenuItemsList = MutableStateFlow<Flow<List<DMPopularMenuItem>>>(emptyFlow())
-    val popularMenuItemsList = _popularMenuItemsList.asStateFlow()
+    open val popularMenuItemsList = _popularMenuItemsList.asStateFlow()
 
     private val _starbucksNewsItemsList =
         MutableStateFlow<Flow<List<DMSocialNewsItem>>>(emptyFlow())
-    val starbucksNewsItemsList = _starbucksNewsItemsList.asStateFlow()
+    open val starbucksNewsItemsList = _starbucksNewsItemsList.asStateFlow()
 
     var coroutineExceptionHandler: CoroutineExceptionHandler =
         CoroutineExceptionHandler { _, exception ->

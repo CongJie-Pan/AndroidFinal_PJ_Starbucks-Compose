@@ -6,7 +6,7 @@ import com.ruthvikbr.data.repo.Constants
 object OrderMenuItems {
     val orderItemsList = listOf(
         OrderItem(
-            "Espresso",
+            "濃縮咖啡",
             0,
             150,
             "https://iili.io/mIg26X.png",
@@ -14,7 +14,7 @@ object OrderMenuItems {
             Constants.HOT_COFFEE
         ),
         OrderItem(
-            "Espresso Con Panna",
+            "康寶藍",
             0,
             175,
             "https://iili.io/mIrFWB.png",
@@ -22,7 +22,7 @@ object OrderMenuItems {
             Constants.HOT_COFFEE
         ),
         OrderItem(
-            "Espresso Macchiato",
+            "瑪奇朵",
             0,
             200,
             "https://iili.io/mIrzOv.png",
@@ -30,7 +30,7 @@ object OrderMenuItems {
             Constants.HOT_COFFEE
         ),
         OrderItem(
-            "Chai Tea",
+            "印度香料茶",
             0,
             125,
             "https://iili.io/mIrPrF.png",
@@ -38,7 +38,7 @@ object OrderMenuItems {
             Constants.HOT_TEA
         ),
         OrderItem(
-            "Earl Grey Tea",
+            "伯爵茶",
             0,
             175,
             "https://iili.io/mI4041.png",
@@ -46,7 +46,7 @@ object OrderMenuItems {
             Constants.HOT_TEA
         ),
         OrderItem(
-            "Royal English Earl Tea",
+            "皇家英式伯爵茶",
             0,
             215,
             "https://iili.io/mI4e4t.png",
@@ -54,7 +54,7 @@ object OrderMenuItems {
             Constants.HOT_TEA
         ),
         OrderItem(
-            "Hot Chocolate",
+            "熱巧克力",
             0,
             200,
             "https://iili.io/mI6pUX.png",
@@ -62,7 +62,7 @@ object OrderMenuItems {
             Constants.HOT_BEVERAGES
         ),
         OrderItem(
-            "Steamed Milk",
+            "蒸奶",
             0,
             150,
             "https://iili.io/mIP3x4.png",
@@ -70,7 +70,7 @@ object OrderMenuItems {
             Constants.HOT_BEVERAGES
         ),
         OrderItem(
-            "Peppermint Hot Chocolate",
+            "薄荷熱巧克力",
             0,
             225,
             "https://iili.io/mIPoJe.png",
@@ -78,7 +78,7 @@ object OrderMenuItems {
             Constants.HOT_BEVERAGES
         ),
         OrderItem(
-            "Iced Caffe Americano",
+            "冰美式咖啡",
             0,
             210,
             "https://iili.io/mItze1.png",
@@ -86,7 +86,7 @@ object OrderMenuItems {
             Constants.COLD_BEVERAGES
         ),
         OrderItem(
-            "Iced Flat White",
+            "冰馥列白",
             0,
             220,
             "https://iili.io/mIt07I.png",
@@ -94,7 +94,7 @@ object OrderMenuItems {
             Constants.COLD_BEVERAGES
         ),
         OrderItem(
-            "Iced Shaken Black Tea",
+            "冰搖紅茶",
             0,
             225,
             "https://iili.io/mID9Ev.png",
@@ -102,7 +102,7 @@ object OrderMenuItems {
             Constants.COLD_BEVERAGES
         ),
         OrderItem(
-            "Iced Shaken Mango Passion Fruit",
+            "冰搖芒果百香果",
             0,
             200,
             "https://iili.io/mIDAy7.png",
@@ -110,7 +110,7 @@ object OrderMenuItems {
             Constants.COLD_BEVERAGES
         ),
         OrderItem(
-            "Iced Shaken Lemon Tea",
+            "冰搖檸檬茶",
             0,
             220,
             "https://iili.io/mIDGaV.png",
@@ -118,7 +118,7 @@ object OrderMenuItems {
             Constants.COLD_BEVERAGES
         ),
         OrderItem(
-            "Iced Classic Chocolate",
+            "冰經典巧克力",
             0,
             275,
             "https://iili.io/mID8ap.png",
@@ -126,7 +126,7 @@ object OrderMenuItems {
             Constants.COLD_BEVERAGES
         ),
         OrderItem(
-            "Iced Signature Chocolate",
+            "冰特選巧克力",
             0,
             300,
             "https://iili.io/mIb9te.png",
@@ -134,7 +134,7 @@ object OrderMenuItems {
             Constants.COLD_BEVERAGES
         ),
         OrderItem(
-            "Coffee Frappuccino",
+            "咖啡星冰樂",
             0,
             220,
             "https://iili.io/mTH3v4.png",
@@ -142,7 +142,7 @@ object OrderMenuItems {
             Constants.FRAPPUCCINO
         ),
         OrderItem(
-            "Caramel Frappuccino",
+            "焦糖星冰樂",
             0,
             315,
             "https://iili.io/mTHGcJ.png",
@@ -150,7 +150,7 @@ object OrderMenuItems {
             Constants.FRAPPUCCINO
         ),
         OrderItem(
-            "Espresso Frappuccino",
+            "濃縮咖啡星冰樂",
             0,
             300,
             "https://iili.io/mTHOMX.png",
@@ -158,7 +158,7 @@ object OrderMenuItems {
             Constants.FRAPPUCCINO
         ),
         OrderItem(
-            "Brownie with Ice Cream",
+            "布朗尼配冰淇淋",
             0,
             220,
             "https://iili.io/mTdMIp.png",
@@ -166,7 +166,7 @@ object OrderMenuItems {
             Constants.DESERTS
         ),
         OrderItem(
-            "Pancake with Ice Cream",
+            "鬆餅配冰淇淋",
             0,
             315,
             "https://iili.io/mT27wl.png",
@@ -174,7 +174,7 @@ object OrderMenuItems {
             Constants.DESERTS
         ),
         OrderItem(
-            "Waffle with Ice Cream",
+            "華夫餅配冰淇淋",
             0,
             300,
             "https://iili.io/mT2fuR.png",
@@ -182,7 +182,7 @@ object OrderMenuItems {
             Constants.DESERTS
         ),
         OrderItem(
-            "Brownie with Ice Cream",
+            "布朗尼配冰淇淋",
             0,
             220,
             "https://iili.io/mTdMIp.png",
@@ -190,7 +190,7 @@ object OrderMenuItems {
             Constants.PACKED_FOODS
         ),
         OrderItem(
-            "Pancake with Ice Cream",
+            "鬆餅配冰淇淋",
             0,
             315,
             "https://iili.io/mT27wl.png",
@@ -198,7 +198,7 @@ object OrderMenuItems {
             Constants.BAKERY
         ),
         OrderItem(
-            "Waffle with Ice Cream",
+            "華夫餅配冰淇淋",
             0,
             300,
             "https://iili.io/mT2fuR.png",

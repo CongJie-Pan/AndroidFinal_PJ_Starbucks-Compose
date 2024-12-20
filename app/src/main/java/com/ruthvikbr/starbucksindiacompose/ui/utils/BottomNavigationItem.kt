@@ -11,9 +11,9 @@ data class NavigationItem(
 
 object BottomNavigationItems {
     val items = listOf(
-        NavigationItem("Home", R.drawable.ic_home, StarbucksScreen.Home.route),
-        NavigationItem("Order", R.drawable.ic_coffee, StarbucksScreen.Order.name),
-        NavigationItem("Profile", R.drawable.ic_person, StarbucksScreen.Profile.route),
-        NavigationItem("Stores", R.drawable.ic_store, StarbucksScreen.Stores.route),
+        NavigationItem("主頁", R.drawable.ic_home, StarbucksScreen.Home.route),
+        NavigationItem("我要訂餐", R.drawable.ic_coffee, StarbucksScreen.Order.name),
+        NavigationItem("個人資料", R.drawable.ic_person, StarbucksScreen.Profile.route),
+        NavigationItem("店家", R.drawable.ic_store, StarbucksScreen.Stores.route),
     )
 }
