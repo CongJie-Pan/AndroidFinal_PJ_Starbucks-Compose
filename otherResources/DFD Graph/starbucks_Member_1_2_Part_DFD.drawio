@@ -1,0 +1,150 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram id="bO28bJGwZdDytMCYZjy-" name="第 1 页">
+    <mxGraphModel dx="1276" dy="606" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="node1" value="&lt;font style=&#39;font-size: 14.0px;&#39; face=&#39;Microsoft JhengHei&#39; color=&#39;#000000&#39;&gt;會員&lt;/font&gt;" style="verticalAlign=middle;html=1;rounded=0;labelBackgroundColor=none;strokeColor=black;fillColor=#e6e6fa;strokeWidth=1;dashed=0;" parent="1" vertex="1">
+          <mxGeometry x="481" y="205" width="73" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="node10" value="&lt;font style=&#39;font-size: 14.0px;&#39; face=&#39;Microsoft JhengHei&#39; color=&#39;#000000&#39;&gt;1.&lt;br/&gt;會員管理&lt;/font&gt;" style="ellipse;aspect=fixed;verticalAlign=middle;html=1;rounded=0;labelBackgroundColor=none;strokeColor=black;fillColor=#ffe4b5;strokeWidth=1;dashed=0;" parent="1" vertex="1">
+          <mxGeometry x="277" y="351" width="108" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="node11" value="&lt;font style=&#39;font-size: 14.0px;&#39; face=&#39;Microsoft JhengHei&#39; color=&#39;#000000&#39;&gt;2.&lt;br/&gt;點數處理&lt;/font&gt;" style="ellipse;aspect=fixed;verticalAlign=middle;html=1;rounded=0;labelBackgroundColor=none;strokeColor=black;fillColor=#ffe4b5;strokeWidth=1;dashed=0;" parent="1" vertex="1">
+          <mxGeometry x="628" y="657" width="108" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="node4" value="&lt;font style=&#39;font-size: 14.0px;&#39; face=&#39;Microsoft JhengHei&#39; color=&#39;#000000&#39;&gt;銀行支付系統&lt;/font&gt;" style="verticalAlign=middle;html=1;rounded=0;labelBackgroundColor=none;strokeColor=black;fillColor=#e6e6fa;strokeWidth=1;dashed=0;" parent="1" vertex="1">
+          <mxGeometry x="818" y="205" width="130" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="node5" value="&lt;font style=&#39;font-size: 14.0px;&#39; face=&#39;Microsoft JhengHei&#39; color=&#39;#000000&#39;&gt;D1 會員資料庫&lt;/font&gt;" style="verticalAlign=middle;html=1;rounded=0;labelBackgroundColor=none;strokeColor=black;fillColor=#98fb98;strokeWidth=1;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="266" y="666" width="108" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="node6" value="&lt;font style=&#39;font-size: 14.0px;&#39; face=&#39;Microsoft JhengHei&#39; color=&#39;#000000&#39;&gt;D2 點數交易紀錄&lt;/font&gt;" style="verticalAlign=middle;html=1;rounded=0;labelBackgroundColor=none;strokeColor=black;fillColor=#98fb98;strokeWidth=1;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="955" y="538" width="127" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" style="html=1;endArrow=block;dashed=0;endFill=1;startArrow=none;startFill=0;fillColor=black;strokeColor=black;strokeWidth=1;rounded=0;exitX=0;exitY=0.75;entryX=0.5000;entryY=0.0000;exitDx=0;exitDy=0;" parent="1" source="node1" target="node10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="525.28" y="235" as="sourcePoint" />
+            <mxPoint x="335" y="336.65" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="331" y="249" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label_edge1" value="&lt;font face=&quot;Microsoft JhengHei&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;會員輸入個人資料&lt;/span&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" parent="edge1" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="55" y="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge2" style="html=1;endArrow=block;dashed=0;endFill=1;startArrow=none;startFill=0;fillColor=black;strokeColor=black;strokeWidth=1;rounded=0;exitX=1;exitY=0.5;entryX=0.405;entryY=0.026;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="node1" target="node11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="606" y="232.3015000000001" as="sourcePoint" />
+            <mxPoint x="672.6535960167662" y="656.9950424146962" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="676" y="235" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label_edge2" value="&lt;font style=&#39;font-size: 10.0px;&#39; face=&#39;Microsoft JhengHei&#39; color=&#39;#000000&#39;&gt; 消費&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" parent="edge2" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-59" y="-143" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge5" style="html=1;endArrow=block;dashed=0;endFill=1;startArrow=none;startFill=0;fillColor=black;strokeColor=black;strokeWidth=1;rounded=0;exitX=0;exitY=0.5;entryX=0.5833;entryY=0.0000;exitDx=0;exitDy=0;" parent="1" source="node4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="804.25" y="359.5" as="sourcePoint" />
+            <mxPoint x="685.9985480666994" y="659.7133890482859" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="690" y="235" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label_edge5" value="&lt;font style=&#39;font-size: 10.0px;&#39; face=&#39;Microsoft JhengHei&#39; color=&#39;#000000&#39;&gt; 付款確認&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" parent="edge5" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="66" y="-140" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge16" style="html=1;endArrow=block;dashed=0;endFill=1;startArrow=none;startFill=0;fillColor=black;strokeColor=black;strokeWidth=1;rounded=0;entryX=0.6667;entryY=1.0000;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" parent="1" source="node5" target="node10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="352" y="666" as="sourcePoint" />
+            <mxPoint x="353" y="462.15999999999997" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label_edge16" value="&lt;font style=&#39;font-size: 10.0px;&#39; face=&#39;Microsoft JhengHei&#39; color=&#39;#000000&#39;&gt; 讀取會員資料&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" parent="edge16" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="34" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge17" style="html=1;endArrow=block;dashed=0;endFill=1;startArrow=none;startFill=0;fillColor=black;strokeColor=black;strokeWidth=1;rounded=0;exitX=0.0000;exitY=0.2222;entryX=0.7222;entryY=0.0000;" parent="1" source="node6" target="node11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="847.92" y="546" as="sourcePoint" />
+            <mxPoint x="706" y="652.39" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="707" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label_edge17" value="&lt;font style=&#39;font-size: 10.0px;&#39; face=&#39;Microsoft JhengHei&#39; color=&#39;#000000&#39;&gt; 查詢點數&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" parent="edge17" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="72" y="6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge7" style="html=1;endArrow=block;dashed=0;endFill=1;startArrow=none;startFill=0;fillColor=black;strokeColor=black;strokeWidth=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="node10" target="node5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="317" y="452.17999999999995" as="sourcePoint" />
+            <mxPoint x="204.07" y="560" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label_edge7" value="&lt;font style=&#39;font-size: 10.0px;&#39; face=&#39;Microsoft JhengHei&#39; color=&#39;#000000&#39;&gt; 儲存會員資料&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" parent="edge7" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-36" y="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge6" style="html=1;endArrow=block;dashed=0;endFill=1;startArrow=none;startFill=0;fillColor=black;strokeColor=black;strokeWidth=1;rounded=0;exitX=1.0000;exitY=0.6667;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="node10" target="node11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="386.05" y="419" as="sourcePoint" />
+            <mxPoint x="640" y="666.9300000000001" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="628" y="421" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label_edge6" value="&lt;font style=&#39;font-size: 10.0px;&#39; face=&#39;Microsoft JhengHei&#39; color=&#39;#000000&#39;&gt; 會員驗證&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" parent="edge6" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-130" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge9" style="html=1;endArrow=block;dashed=0;endFill=1;startArrow=none;startFill=0;fillColor=black;strokeColor=black;strokeWidth=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="node11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="727" y="666" as="sourcePoint" />
+            <mxPoint x="953" y="577" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="738" y="575" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label_edge9" value="&lt;font style=&#39;font-size: 10.0px;&#39; face=&#39;Microsoft JhengHei&#39; color=&#39;#000000&#39;&gt; 點數異動&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" parent="edge9" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge8" style="html=1;endArrow=block;dashed=0;endFill=1;startArrow=none;startFill=0;fillColor=black;strokeColor=black;strokeWidth=1;rounded=0;exitX=0.2222;exitY=0.0000;entryX=1.0000;entryY=0.3333;" parent="1" source="node11" target="node10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="652" y="666.0799999999999" as="sourcePoint" />
+            <mxPoint x="395.93" y="383" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="656" y="389" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label_edge8" value="&lt;font style=&#39;font-size: 10.0px;&#39; face=&#39;Microsoft JhengHei&#39; color=&#39;#000000&#39;&gt; 點數查詢&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" parent="edge8" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-158" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,75 @@
+digraph StarbucksSystem {
+    // Graph settings
+    rankdir=TB;
+    splines=ortho;
+    nodesep=0.8;
+    ranksep=1.0;
+    
+    // Title
+    label="星巴克整合服務系統\n數據流程圖";
+    labelloc="t";
+    fontname="Microsoft JhengHei";
+    fontsize=24;
+    
+    // Default node settings
+    node [fontname="Microsoft JhengHei", fontsize=14, margin=0.3];
+    edge [fontname="Microsoft JhengHei", fontsize=12];
+
+    // External Entities (Rectangles)
+    node [shape=box, style=filled, fillcolor="#E6E6FA"];
+    Member [label="會員"];
+    Store [label="門市"];
+    Marketing [label="行銷部門"];
+    Bank [label="銀行支付系統"];
+
+    // Processes (Circles)
+    node [shape=circle, style=filled, fillcolor="#FFE4B5", width=1.5, fixedsize=true];
+    P1 [label="1.\n會員管理"];
+    P2 [label="2.\n點數處理"];
+    P3 [label="3.\n門市管理"];
+    P4 [label="4.\n行銷活動"];
+    P5 [label="5.\n庫存管理"];
+
+    // Data Stores (Open Rectangles)
+    node [shape=box, style="filled,dashed", fillcolor="#98FB98"];
+    DS1 [label="D1 會員資料庫"];
+    DS2 [label="D2 點數交易紀錄"];
+    DS3 [label="D3 門市資料庫"];
+    DS4 [label="D4 行銷活動資料庫"];
+    DS5 [label="D5 商品資料庫"];
+
+    // Data Flows
+    edge [color="black", fontsize=10];
+    
+    // External Entity to Process flows
+    Member -> P1 [label=" 註冊/登入"];
+    Member -> P2 [label=" 消費"];
+    Store -> P3 [label=" 銷售數據"];
+    Marketing -> P4 [label=" 活動規劃"];
+    Bank -> P2 [label=" 付款確認"];
+
+    // Process to Data Store flows
+    P1 -> DS1 [label=" 儲存會員資料"];
+    P2 -> DS2 [label=" 點數異動"];
+    P3 -> DS3 [label=" 門市資訊更新"];
+    P4 -> DS4 [label=" 活動資訊"];
+    P5 -> DS5 [label=" 商品資訊"];
+
+    // Inter-process flows
+    P1 -> P2 [label=" 會員驗證"];
+    P2 -> P1 [label=" 點數查詢"];
+    P3 -> P4 [label=" 銷售分析"];
+    P4 -> P3 [label=" 促銷方案"];
+    P5 -> P3 [label=" 庫存警告"];
+
+    // Data Store to Process flows
+    DS1 -> P1 [label=" 讀取會員資料"];
+    DS2 -> P2 [label=" 查詢點數"];
+    DS3 -> P3 [label=" 查詢門市"];
+    DS4 -> P4 [label=" 查詢活動"];
+    DS5 -> P5 [label=" 查詢庫存"];
+
+    // Subgraph for layout
+    {rank=same; Member Store Marketing Bank}
+    {rank=same; DS1 DS2 DS3 DS4 DS5}
+}
