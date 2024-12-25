@@ -108,12 +108,7 @@ project-root/
 └── gradlew.bat  # 用於在 Windows 系統上執行 Gradle 構建的腳本
 ```
 ---
-### UI Setting 資料夾
-
-**該資料夾內的檔案用GPT做詳細中文註解，了解業務。**
-
-**或許可以問作者，可以在哪裡修改 ?**
-
+### UI Setting 資料夾(實作的內容主要在這個資料夾)
 ---
 - app/build/generated/source/kapt/debug/com/ruthvikbr/starbucksindiacompose/ui
 - navigation/src/main/java
