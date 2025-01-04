@@ -3,7 +3,7 @@ package com.ruthvikbr.data.models
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "Order")
+@Entity(tableName = "order_items")
 data class OrderItem(
     val itemName: String,
     val itemCount: Int,
