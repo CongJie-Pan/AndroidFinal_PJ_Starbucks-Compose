@@ -26,4 +26,7 @@ RegistrationSuccess.kt
 註冊成功動畫與提示
 成功畫面的視覺效果
 
+ProfileDetails.kt
+個人資訊頁面
+
 這些檔案組成了完整的註冊流程UI，字串資源定義在 strings.xml 中。註冊階段定義在 RegistrationStage.kt。

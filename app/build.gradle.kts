@@ -98,4 +98,13 @@ dependencies {
     implementation(Dependencies.COMPOSE.ACCOMPANIST_PAGER)
     implementation(Dependencies.COMPOSE.ACCOMPANIST_PAGER_INDICATOR)
     implementation(Dependencies.COMPOSE.COLLAPSIBLE_TOOLBAR)
+
+    implementation(project(":data")) // Include the data module
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0") // Hilt navigation for Jetpack Compose
+    kapt("com.google.dagger:hilt-android-compiler:2.44") // Hilt compiler for annotation processing
+
+    // Room
+    implementation(Dependencies.ANDROID.ROOM)
+    implementation(Dependencies.ANDROID.ROOM_KTX)
+    kapt(Dependencies.ANDROID.ROOM_COMPILER)
 }
