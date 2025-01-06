@@ -24,24 +24,23 @@ import com.starbuckscompose.navigation.StarbucksScreen
 import com.ruthvikbr.starbucksindiacompose.ui.screens.signup.SignupViewModel
 import com.ruthvikbr.starbucksindiacompose.ui.components.AppBar
 
-
-// 註冊階段的枚舉
+// 定義註冊流程的四個主要階段
 enum class RegistrationStage {
-    CredentialsStage,
-    OtpVerificationStage,
-    PersonalDetailsStage,
-    RegistrationSuccessStage
+    CredentialsStage,        // 輸入帳號密碼階段
+    OtpVerificationStage,    // OTP驗證階段
+    PersonalDetailsStage,    // 個人資料填寫階段
+    RegistrationSuccessStage // 註冊成功階段
 }
 
-// 動畫持續時間常量
+// 定義動畫時間常數（單位：毫秒）
 const val REGISTRATION_SCREEN_SLIDE_OUT_ANIMATION = 300
 const val REGISTRATION_SCREEN_SLIDE_IN_ANIMATION = 300
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun SignupScreen(
-    composeNavigator: ComposeNavigator,
-    viewModel: SignupViewModel = hiltViewModel()
+    composeNavigator: ComposeNavigator,    // 負責處理畫面導航
+    viewModel: SignupViewModel = hiltViewModel()  // 使用 Hilt 注入 ViewModel
 ) {
     // 使用 remember 和 mutableStateOf 來創建可變狀態
     var email by remember { mutableStateOf("") }
@@ -75,8 +74,9 @@ fun SignupScreen(
     // 註冊階段
     var registrationStage by remember { mutableStateOf(1) }
 
-    // 使用 LaunchedEffect 來處理註冊步驟的變化
+    // LaunchedEffect 用於處理註冊階段改變時的副作用
     LaunchedEffect(key1 = currentRegistrationStep) {
+        // 根據不同註冊階段更新 AppBar 標題和進度
         when (currentRegistrationStep) {
             RegistrationStage.CredentialsStage -> {
                 appBarTitle = initialAppBarTitle
@@ -97,7 +97,7 @@ fun SignupScreen(
         }
     }
 
-    // 使用 Scaffold 來構建基本的頁面結構
+    // Scaffold 提供基本的 Material Design 佈局結構
     Scaffold(
         topBar = {
             AppBar(
@@ -109,6 +109,7 @@ fun SignupScreen(
         },
     ) {
         Column(
+            // 主要內容區域，包含註冊進度和表單
             modifier = Modifier
                 .fillMaxWidth()
                 .fillMaxHeight()

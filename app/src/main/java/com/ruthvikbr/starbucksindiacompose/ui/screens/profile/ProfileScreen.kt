@@ -26,9 +26,18 @@ import com.starbuckscompose.navigation.ComposeNavigator
 import com.starbuckscompose.navigation.StarbucksScreen
 import java.util.*
 
+/*
+ * 此檔案實現了 Starbucks APP 的個人檔案頁面
+ * 顯示用戶的個人資訊和各種設定選項
+ * 包含導航功能和登出選項
+ */
+
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun ProfileScreen(composeNavigator: ComposeNavigator) {
+    // Scaffold 用於實現基本的頁面結構
+    // 頂部欄包含返回按鈕、通知和設定選項
+    // LazyColumn 用於顯示個人資料和選單項目
     Scaffold(topBar = {
         ProfileAppBar(
             onBackButtonClicked = {

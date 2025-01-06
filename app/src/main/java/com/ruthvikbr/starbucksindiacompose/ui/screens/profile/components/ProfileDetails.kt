@@ -18,8 +18,17 @@ import androidx.compose.runtime.collectAsState
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.ruthvikbr.starbucksindiacompose.ui.screens.profile.ProfileViewModel
 
+/*
+ * 此檔案負責顯示用戶的詳細個人資料
+ * 使用 ViewModel 來管理和獲取用戶數據
+ * 展示用戶頭像、姓名、電子郵件等個人資訊
+ */
+
 @Composable
 fun ProfileDetails(viewModel: ProfileViewModel = hiltViewModel()) {
+    // 使用 collectAsState 來觀察用戶數據的變化
+    // 顯示用戶的基本資料，包括姓名、歡迎訊息
+    // 展示用戶的聯絡資訊和生日
     val user = viewModel.user.collectAsState().value
 
     Column(

@@ -45,6 +45,13 @@ import com.ruthvikbr.starbucksindiacompose.ui.theme.PrimaryBlack
 import com.ruthvikbr.starbucksindiacompose.ui.theme.PrimaryWhite
 import com.ruthvikbr.starbucksindiacompose.ui.theme.ReferralCardBackground
 
+/*
+ * 此檔案實現了 Starbucks APP 的個人資料註冊表單介面
+ * 包含姓名、生日、推薦碼等基本資料的輸入功能
+ * 實現了表單驗證和使用者偏好設定的功能
+ */
+
+// PersonalDetailsForm 組件：主要的表單容器
 @Composable
 fun PersonalDetailsForm(
     firstName: String,
@@ -62,6 +69,7 @@ fun PersonalDetailsForm(
     onEmailPreferenceChanged: (Boolean) -> Unit,
     onSubmitClicked: () -> Unit,
 ) {
+    // LazyColumn 用於創建可滾動的表單佈局
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -104,6 +112,7 @@ fun PersonalDetailsForm(
     }
 }
 
+// Header 組件：顯示表單標題
 @Composable
 fun Header() {
     Column(modifier = Modifier.fillMaxWidth()) {
@@ -120,6 +129,7 @@ fun Header() {
     }
 }
 
+// Form 組件：包含主要的個人資料輸入欄位
 @Composable
 fun Form(
     firstName: String,
@@ -132,6 +142,7 @@ fun Form(
     onReferralCodeChanged: (String) -> Unit,
     onReferralCodeSubmitted: () -> Unit,
 ) {
+    // 包含姓名、生日等基本資料輸入欄位
     Column(modifier = Modifier.fillMaxWidth().padding(24.dp)) {
         StarbucksTextField(
             value = firstName,
@@ -176,6 +187,7 @@ fun Form(
     }
 }
 
+// ReferralForm 組件：處理推薦碼的輸入和提交
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun ReferralForm(
@@ -183,6 +195,7 @@ fun ReferralForm(
     onReferralCodeChanged: (String) -> Unit,
     onReferralCodeSubmitted: () -> Unit,
 ) {
+    // 創建推薦碼輸入區域，包含輸入框和提交按鈕
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -252,6 +265,7 @@ fun ReferralForm(
     }
 }
 
+// PreferencesForm 組件：處理用戶通知偏好設定
 @Composable
 fun PreferencesForm(
     isSmsEnabled: Boolean,
@@ -259,6 +273,7 @@ fun PreferencesForm(
     onSmsPreferenceChanged: (Boolean) -> Unit,
     onEmailPreferenceChanged: (Boolean) -> Unit,
 ) {
+    // 允許用戶選擇接收 SMS 或 Email 通知的偏好
     Column(modifier = Modifier.fillMaxWidth().background(PrimaryWhite)) {
         Text(
             text = stringResource(id = R.string.preferences_terms),
