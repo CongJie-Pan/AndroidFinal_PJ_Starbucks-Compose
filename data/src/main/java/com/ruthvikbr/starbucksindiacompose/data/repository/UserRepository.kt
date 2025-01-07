@@ -3,6 +3,7 @@
 
 package com.ruthvikbr.starbucksindiacompose.data.repository
 
+import android.util.Log
 import com.ruthvikbr.starbucksindiacompose.data.dao.UserDao
 import com.ruthvikbr.starbucksindiacompose.data.entity.User
 import javax.inject.Inject
@@ -13,14 +14,25 @@ class UserRepository @Inject constructor(private val userDao: UserDao) {
      * 插入或更新用戶
      * @param user 要插入或更新的用戶對象
      */
-    suspend fun insertUser(user: User) = userDao.insertUser(user)
+    suspend fun insertUser(user: User) {
+        try {
+            userDao.insertUser(user)
+            Log.d("UserRepository", "User inserted/updated successfully: $user")
+        } catch (e: Exception) {
+            Log.e("UserRepository", "Error inserting/updating user: ${e.message}", e)
+        }
+    }
 
     /**
      * 根據電子郵件地址獲取用戶
      * @param email 用戶的電子郵件地址
      * @return 返回匹配的用戶對象，如果沒有找到則返回 null
      */
-    suspend fun getUserByEmail(email: String) = userDao.getUserByEmail(email)
+    suspend fun getUserByEmail(email: String): User? {
+        val user = userDao.getUserByEmail(email)
+        Log.d("UserRepository", "getUserByEmail for $email, result: $user")
+        return user
+    }
 
     /**
      * 獲取所有用戶

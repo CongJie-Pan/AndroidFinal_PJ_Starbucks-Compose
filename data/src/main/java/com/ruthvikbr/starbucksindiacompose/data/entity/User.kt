@@ -8,11 +8,12 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "users")
 data class User(
     @PrimaryKey val email: String,
+    val password: String,
     val firstName: String,
     val lastName: String,
     val birthday: String,
     val mobileNumber: String,
+    val referralCode: String,
     val isSmsEnabled: Boolean,
-    val isEmailEnabled: Boolean,
-    val referralCode: String?
+    val isEmailEnabled: Boolean
 )

@@ -7,6 +7,7 @@
 package com.ruthvikbr.starbucksindiacompose.ui.screens.signup
 
 // 導入必要的類和依賴
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ruthvikbr.starbucksindiacompose.data.entity.User
@@ -47,16 +48,24 @@ class SignupViewModel @Inject constructor(
     ) {
         // 在協程範圍內執行數據庫操作
         viewModelScope.launch {
-            // 創建用戶實體
             val user = User(
                 email = email,
+                password = password,
                 firstName = firstName,
                 lastName = lastName,
                 birthday = birthday,
-                mobileNumber = mobileNumber
+                mobileNumber = mobileNumber,
+                referralCode = referralCode,
+                isSmsEnabled = isSmsEnabled,
+                isEmailEnabled = isEmailEnabled
             )
-            // 將用戶信息插入數據庫
-            userDao.insertUser(user)
+            try {
+                userDao.insertUser(user)
+                Log.d("SignupViewModel", "User saved successfully: $user")
+            } catch (e: Exception) {
+                Log.e("SignupViewModel", "Error saving user: ${e.message}", e)
+            }
         }
+
     }
 }

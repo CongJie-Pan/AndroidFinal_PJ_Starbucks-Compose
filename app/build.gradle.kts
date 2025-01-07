@@ -35,6 +35,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+
+        // 解決 Argument -Xopt-in is deprecated" 的警告
+        freeCompilerArgs = listOf("-opt-in=kotlin.RequiresOptIn")
     }
     buildFeatures {
         compose = true
@@ -65,6 +68,7 @@ dependencies {
     implementation(Dependencies.COMPOSE.GLIDE)
     implementation(Dependencies.COMPOSE.MATERIAL_ICONS)
     implementation(Dependencies.ANDROID.CONSTRAINT_LAYOUT)
+    implementation("androidx.compose.ui:ui:1.0.1")
 
     testImplementation(Dependencies.TEST.JUNIT)
     testImplementation(Dependencies.TEST.COROUTINES_TEST)
