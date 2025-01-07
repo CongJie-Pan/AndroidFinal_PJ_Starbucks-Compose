@@ -4,6 +4,32 @@ bug 紀錄
 1. 很奇怪 SignupViewModel有進行程式的語法標註 但就是compile沒有compile到。看來是需要重新indexing ok
 2. 資料庫建置完成，但註冊頁面內容沒有寫進去資料庫 ok
 3. 跳到order頁面會跳掉。
-4. 目前只能寫單一的使用者，多個使用者註冊，就不能呈現出不同的結果了。
+4. 目前只能寫單一的使用者，多個使用者註冊，就不能呈現出不同的結果了。ok
 (先可以在profile detail 頁面 呈現出不同使用者的結果。)
 ---
+2025 / 1 / 7
+1. 在個人頁面實作登出按鈕，並且真正實現登入功能(不同帳號有不同的資料顯示)
+2. 解決點到order頁面，程式會崩潰的問題，以下為LogCat 的錯誤訊息:
+
+FATAL EXCEPTION: main
+                                                                                                    Process: com.ruthvikbr.starbucksindiacompose, PID: 5691
+                                                                                                    java.lang.IllegalStateException: A migration from 1 to 2 was required but not found. Please provide the necessary Migration path via RoomDatabase.Builder.addMigration(Migration ...) or allow for destructive migrations via one of the RoomDatabase.Builder.fallbackToDestructiveMigration* methods.
+                                                                                                    	at androidx.room.RoomOpenHelper.onUpgrade(RoomOpenHelper.java:117)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.onUpgrade(FrameworkSQLiteOpenHelper.java:183)
+                                                                                                    	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:415)
+                                                                                                    	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:316)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getWritableSupportDatabase(FrameworkSQLiteOpenHelper.java:151)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper.getWritableDatabase(FrameworkSQLiteOpenHelper.java:112)
+                                                                                                    	at androidx.room.RoomDatabase.inTransaction(RoomDatabase.java:706)
+                                                                                                    	at androidx.room.RoomDatabase.assertNotSuspendingTransaction(RoomDatabase.java:483)
+                                                                                                    	at androidx.room.RoomDatabase.query(RoomDatabase.java:526)
+                                                                                                    	at androidx.room.util.DBUtil.query(DBUtil.java:86)
+                                                                                                    	at com.ruthvikbr.data.local.StarbucksDao_Impl$12.call(StarbucksDao_Impl.java:390)
+                                                                                                    	at com.ruthvikbr.data.local.StarbucksDao_Impl$12.call(StarbucksDao_Impl.java:387)
+                                                                                                    	at androidx.room.CoroutinesRoom$Companion$createFlow$1$1$1.invokeSuspend(CoroutinesRoom.kt:128)
+                                                                                                    	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+                                                                                                    	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+                                                                                                    	at java.lang.Thread.run(Thread.java:1012)
+                                                                                                    	Suppressed: kotlinx.coroutines.DiagnosticCoroutineContextException: [androidx.compose.ui.platform.MotionDurationScaleImpl@9d8461b, androidx.compose.runtime.BroadcastFrameClock@a5443b8, StandaloneCoroutine{Cancelling}@ad31591, AndroidUiDispatcher@b988cf6]
