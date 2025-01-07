@@ -11,5 +11,8 @@ data class User(
     val firstName: String,
     val lastName: String,
     val birthday: String,
-    val mobileNumber: String
+    val mobileNumber: String,
+    val isSmsEnabled: Boolean,
+    val isEmailEnabled: Boolean,
+    val referralCode: String?
 )
