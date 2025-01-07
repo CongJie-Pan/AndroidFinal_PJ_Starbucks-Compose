@@ -1,5 +1,6 @@
 prompt: 
 - 在程式頭部做一兩句的繁體中文簡短註解詳細解釋其功用
+AI 寫程式：當新增或修改檔案時，要一個個來，不要過多同時接受AI給的Code，還要在新增同時，對每個code加上註解。
 - 並且輔以詳細的程式碼註解，並且還要在頭部給予用兩句話說明此code的主要功用。
 ---
 
@@ -49,5 +50,8 @@ DatabaseModule
 UserRepository.kt
 // 此類別作為用戶數據的存儲庫，提供了一個抽象層來訪問用戶數據。
 // 它封裝了數據訪問的邏輯，使得 ViewModel 可以更方便地操作用戶數據。
+---
+AppModule.kt
+// 創建一個新的 Hilt 模組來提供 android.content.Context
 
 
