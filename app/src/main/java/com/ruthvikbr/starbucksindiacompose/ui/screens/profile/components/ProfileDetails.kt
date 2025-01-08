@@ -21,6 +21,8 @@ import com.ruthvikbr.starbucksindiacompose.data.entity.User
 import com.ruthvikbr.starbucksindiacompose.ui.components.SpacerComponent
 import com.ruthvikbr.starbucksindiacompose.ui.screens.profile.ProfileViewModel
 import com.ruthvikbr.starbucksindiacompose.ui.theme.PrimaryWhite
+import java.text.SimpleDateFormat
+import java.util.Locale
 
 @Composable
 fun ProfileDetails(viewModel: ProfileViewModel = hiltViewModel(),user: User?) {
@@ -53,7 +55,7 @@ fun ProfileDetails(viewModel: ProfileViewModel = hiltViewModel(),user: User?) {
 
         // 顯示歡迎訊息
         Text(
-            text = "Welcome ${user?.firstName}",
+            text = "您好 ${user?.firstName}",
             style = MaterialTheme.typography.h6.copy(fontWeight = FontWeight.Normal),
             color = PrimaryWhite
         )
@@ -61,20 +63,34 @@ fun ProfileDetails(viewModel: ProfileViewModel = hiltViewModel(),user: User?) {
         SpacerComponent(spaceInDp = 16.dp)
 
         // 顯示用戶聯絡資訊
-        UserInfoItem(label = "Email", value = user?.email)
-        UserInfoItem(label = "Mobile", value = user?.mobileNumber)
-        UserInfoItem(label = "Birthday", value = user?.birthday)
+        UserInfoItem(label = "電子郵件", value = user?.email)
+        UserInfoItem(label = "手機號碼", value = user?.mobileNumber)
+
+        // 顯示用戶生日，改善顯示格式
+        UserInfoItem(label = "生日", value = user?.birthday?.let { formatDate(it) })
 
         // 顯示用戶偏好設定
         SpacerComponent(spaceInDp = 8.dp)
         Text(
-            text = "Preferences",
+            text = "您的訊息偏好設定",
             style = MaterialTheme.typography.h6,
             color = PrimaryWhite,
             fontWeight = FontWeight.Bold
         )
-        UserPreferenceItem(label = "SMS Notifications", isEnabled = user?.isSmsEnabled ?: false)
-        UserPreferenceItem(label = "Email Notifications", isEnabled = user?.isEmailEnabled ?: false)
+        UserPreferenceItem(label = "SMS 即時訊息開啟", isEnabled = user?.isSmsEnabled ?: false)
+        UserPreferenceItem(label = "電子郵件訊息開啟", isEnabled = user?.isEmailEnabled ?: false)
+    }
+}
+
+// 改善生日顯示格式
+fun formatDate(dateString: String): String {
+    return try {
+        val inputFormat = SimpleDateFormat("ddMMyyyy", Locale.getDefault())
+        val outputFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+        val date = inputFormat.parse(dateString)
+        outputFormat.format(date)
+    } catch (e: Exception) {
+        "Invalid date"
     }
 }
 
