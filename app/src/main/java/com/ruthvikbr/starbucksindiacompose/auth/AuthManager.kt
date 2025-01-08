@@ -1,26 +1,35 @@
-// 此類別負責管理用戶的身份驗證狀態，包括登入、登出和獲取當前用戶信息。
-// 它使用 SharedPreferences 來持久化存儲用戶的登錄狀態。
-
 package com.ruthvikbr.starbucksindiacompose.auth
 
 import android.content.Context
+import android.util.Log
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 import javax.inject.Singleton
 
+/**
+ * AuthManager 負責管理用戶的身份驗證狀態。
+ * 它提供了設置當前用戶、獲取當前用戶信息、登出功能，以及檢查用戶登錄狀態的方法。
+ */
 @Singleton
 class AuthManager @Inject constructor(
     @ApplicationContext private val context: Context
 ) {
-    // 使用 SharedPreferences 來存儲身份驗證相關的數據
-    private val sharedPreferences = context.getSharedPreferences("auth_prefs", Context.MODE_PRIVATE)
+    private val TAG = "AuthManager"
+    private val PREFS_NAME = "auth_prefs"
+    private val KEY_CURRENT_USER = "current_user_email"
+
+    private val sharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
 
     /**
-     * 設置當前登錄用戶的電子郵件
+     * 設置當前登錄用戶
      * @param email 用戶的電子郵件地址
      */
     fun setCurrentUser(email: String) {
-        sharedPreferences.edit().putString("current_user_email", email).apply()
+        Log.d(TAG, "Setting current user: $email")
+        sharedPreferences.edit().putString(KEY_CURRENT_USER, email).apply()
+        Log.d(TAG, "Current user set successfully. Verifying...")
+        val verifiedEmail = getCurrentUserEmail()
+        Log.d(TAG, "Verified current user: $verifiedEmail")
     }
 
     /**
@@ -28,21 +37,29 @@ class AuthManager @Inject constructor(
      * @return 當前用戶的電子郵件地址，如果沒有登錄用戶則返回 null
      */
     fun getCurrentUserEmail(): String? {
-        return sharedPreferences.getString("current_user_email", null)
+        val email = sharedPreferences.getString(KEY_CURRENT_USER, null)
+        Log.d(TAG, "Getting current user email: $email")
+        return email
     }
 
     /**
      * 登出當前用戶
      */
     fun logout() {
-        sharedPreferences.edit().remove("current_user_email").apply()
+        Log.d(TAG, "Logging out current user")
+        sharedPreferences.edit().remove(KEY_CURRENT_USER).apply()
+        Log.d(TAG, "Logout completed. Verifying...")
+        val verifiedEmail = getCurrentUserEmail()
+        Log.d(TAG, "Verified current user after logout: $verifiedEmail")
     }
 
     /**
-     * 檢查用戶是否已登錄
-     * @return 如果用戶已登錄則返回 true，否則返回 false
+     * 檢查是否有用戶當前已登錄
+     * @return 如果有用戶登錄則返回 true，否則返回 false
      */
     fun isUserLoggedIn(): Boolean {
-        return getCurrentUserEmail() != null
+        val isLoggedIn = getCurrentUserEmail() != null
+        Log.d(TAG, "Checking if user is logged in: $isLoggedIn")
+        return isLoggedIn
     }
 }

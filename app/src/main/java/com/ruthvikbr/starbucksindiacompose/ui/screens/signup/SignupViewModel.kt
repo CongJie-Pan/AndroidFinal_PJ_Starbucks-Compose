@@ -1,39 +1,29 @@
-/*
- * 此ViewModel用於處理用戶註冊相關的業務邏輯
- * 負責將用戶註冊資訊保存到本地數據庫
- * 使用Hilt進行依賴注入，確保UserDao的正確注入和使用
- */
-
 package com.ruthvikbr.starbucksindiacompose.ui.screens.signup
 
-// 導入必要的類和依賴
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ruthvikbr.starbucksindiacompose.data.entity.User
 import com.ruthvikbr.starbucksindiacompose.data.dao.UserDao
+import com.ruthvikbr.starbucksindiacompose.data.entity.User
+import com.ruthvikbr.starbucksindiacompose.auth.AuthManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import android.util.Log
 
-// 使用Hilt注入的ViewModel
+/**
+ * SignupViewModel 負責處理用戶註冊過程中的業務邏輯。
+ * 它管理用戶數據的保存，驗證輸入，並在註冊成功後設置當前用戶。
+ */
 @HiltViewModel
 class SignupViewModel @Inject constructor(
-    // 注入UserDao用於數據庫操作
-    private val userDao: UserDao
+    private val userDao: UserDao,
+    private val authManager: AuthManager
 ) : ViewModel() {
 
+    private val TAG = "SignupViewModel"
+
     /**
-     * 保存用戶信息到數據庫
-     * @param email 用戶郵箱
-     * @param password 用戶密碼
-     * @param mobileNumber 手機號碼
-     * @param firstName 名字
-     * @param lastName 姓氏
-     * @param birthday 生日
-     * @param referralCode 推薦碼
-     * @param isSmsEnabled 是否開啟簡訊通知
-     * @param isEmailEnabled 是否開啟郵件通知
+     * 保存用戶信息到數據庫並設置當前用戶
      */
     fun saveUser(
         email: String,
@@ -46,8 +36,15 @@ class SignupViewModel @Inject constructor(
         isSmsEnabled: Boolean,
         isEmailEnabled: Boolean
     ) {
-        // 在協程範圍內執行數據庫操作
         viewModelScope.launch {
+            Log.d(TAG, "Attempting to save user: $email")
+
+            // 驗證輸入
+            if (!validateInput(email, password, mobileNumber, firstName, lastName, birthday)) {
+                Log.e(TAG, "Invalid input data")
+                return@launch
+            }
+
             val user = User(
                 email = email,
                 password = password,
@@ -59,13 +56,47 @@ class SignupViewModel @Inject constructor(
                 isSmsEnabled = isSmsEnabled,
                 isEmailEnabled = isEmailEnabled
             )
+
             try {
+                // 保存用戶到數據庫
                 userDao.insertUser(user)
-                Log.d("SignupViewModel", "User saved successfully: $user")
+                Log.d(TAG, "User saved to database successfully")
+
+                // 設置當前用戶
+                authManager.setCurrentUser(email)
+                Log.d(TAG, "Current user set in AuthManager")
+
+                // 驗證用戶是否成功保存和設置
+                val savedUser = userDao.getUserByEmail(email)
+                Log.d(TAG, "Verified saved user: $savedUser")
+                val currentUserEmail = authManager.getCurrentUserEmail()
+                Log.d(TAG, "Verified current user email: $currentUserEmail")
+
             } catch (e: Exception) {
-                Log.e("SignupViewModel", "Error saving user: ${e.message}", e)
+                Log.e(TAG, "Error saving user: ${e.message}", e)
             }
         }
+    }
 
+    /**
+     * 驗證用戶輸入的數據
+     */
+    private fun validateInput(
+        email: String,
+        password: String,
+        mobileNumber: String,
+        firstName: String,
+        lastName: String,
+        birthday: String
+    ): Boolean {
+        if (email.isBlank() || password.isBlank() || mobileNumber.isBlank() ||
+            firstName.isBlank() || lastName.isBlank() || birthday.isBlank()
+        ) {
+            Log.w(TAG, "One or more required fields are empty")
+            return false
+        }
+        // 可以添加更多驗證，如電子郵件格式、密碼強度等
+        Log.d(TAG, "Input validation passed")
+        return true
     }
 }
