@@ -10,8 +10,8 @@ class UserRepository @Inject constructor(private val userDao: UserDao) {
     private val TAG = "UserRepository"
 
     /**
-     * 插入或更新用戶
-     * @param user 要插入或更新的用戶對象
+     * 插入或更新使用者
+     * @param user 要插入或更新的使用者對象
      */
     suspend fun insertUser(user: User) {
         try {
@@ -23,9 +23,9 @@ class UserRepository @Inject constructor(private val userDao: UserDao) {
     }
 
     /**
-     * 獲取用戶
-     * @param email 用戶的電子郵件地址
-     * @return 返回用戶對象，如果沒有用戶則返回 null
+     * 獲取使用者
+     * @param email 使用者的電子郵件地址
+     * @return 返回使用者對象，如果沒有使用者則返回 null
      */
     suspend fun getUser(email: String): User? {
         return try {
@@ -39,8 +39,8 @@ class UserRepository @Inject constructor(private val userDao: UserDao) {
     }
 
     /**
-     * 更新用戶信息
-     * @param user 更新後的用戶對象
+     * 更新使用者資訊
+     * @param user 更新後的使用者對象
      */
     suspend fun updateUser(user: User) {
         try {
@@ -52,8 +52,8 @@ class UserRepository @Inject constructor(private val userDao: UserDao) {
     }
 
     /**
-     * 刪除用戶
-     * @param email 要刪除的用戶的電子郵件地址
+     * 刪除使用者
+     * @param email 要刪除的使用者的電子郵件地址
      */
     suspend fun deleteUser(email: String) {
         try {
@@ -65,9 +65,9 @@ class UserRepository @Inject constructor(private val userDao: UserDao) {
     }
 
     /**
-     * 檢查是否存在用戶
-     * @param email 要檢查的用戶的電子郵件地址
-     * @return 如果存在用戶則返回 true，否則返回 false
+     * 檢查是否存在使用者
+     * @param email 要檢查的使用者的電子郵件地址
+     * @return 如果存在使用者則返回 true，否則返回 false
      */
     suspend fun userExists(email: String): Boolean {
         return try {

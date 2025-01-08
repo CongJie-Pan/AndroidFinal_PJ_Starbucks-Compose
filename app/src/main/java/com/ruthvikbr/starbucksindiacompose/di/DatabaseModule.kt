@@ -11,7 +11,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
-// DatabaseModule 提供了數據庫相關的依賴注入。
+// DatabaseModule 提供了資料庫相關的依賴注入。
 // 它負責創建和提供 AppDatabase 實例以及各種 DAO 實例。
 
 @Module

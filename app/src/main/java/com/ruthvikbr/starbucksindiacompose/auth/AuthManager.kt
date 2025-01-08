@@ -7,8 +7,8 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * AuthManager 負責管理用戶的身份驗證狀態。
- * 它提供了設置當前用戶、獲取當前用戶信息、登出功能，以及檢查用戶登錄狀態的方法。
+ * AuthManager 負責管理使用者的身份驗證狀態。
+ * 它提供了設置當前使用者、獲取當前使用者資訊、登出功能，以及檢查使用者登錄狀態的方法。
  */
 @Singleton
 class AuthManager @Inject constructor(
@@ -21,8 +21,8 @@ class AuthManager @Inject constructor(
     private val sharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
 
     /**
-     * 設置當前登錄用戶
-     * @param email 用戶的電子郵件地址
+     * 設置當前登錄使用者
+     * @param email 使用者的電子郵件地址
      */
     fun setCurrentUser(email: String) {
         Log.d(TAG, "Setting current user: $email")
@@ -33,8 +33,8 @@ class AuthManager @Inject constructor(
     }
 
     /**
-     * 獲取當前登錄用戶的電子郵件
-     * @return 當前用戶的電子郵件地址，如果沒有登錄用戶則返回 null
+     * 獲取當前登錄使用者的電子郵件
+     * @return 當前使用者的電子郵件地址，如果沒有登錄使用者則返回 null
      */
     fun getCurrentUserEmail(): String? {
         val email = sharedPreferences.getString(KEY_CURRENT_USER, null)
@@ -43,7 +43,7 @@ class AuthManager @Inject constructor(
     }
 
     /**
-     * 登出當前用戶
+     * 登出當前使用者
      */
     fun logout() {
         Log.d(TAG, "Logging out current user")
@@ -54,8 +54,8 @@ class AuthManager @Inject constructor(
     }
 
     /**
-     * 檢查是否有用戶當前已登錄
-     * @return 如果有用戶登錄則返回 true，否則返回 false
+     * 檢查是否有使用者當前已登錄
+     * @return 如果有使用者登錄則返回 true，否則返回 false
      */
     fun isUserLoggedIn(): Boolean {
         val isLoggedIn = getCurrentUserEmail() != null

@@ -11,8 +11,8 @@ import javax.inject.Inject
 import android.util.Log
 
 /**
- * SignupViewModel 負責處理用戶註冊過程中的業務邏輯。
- * 它管理用戶數據的保存，驗證輸入，並在註冊成功後設置當前用戶。
+ * SignupViewModel 負責處理使用者註冊過程中的業務邏輯。
+ * 它管理使用者數據的保存，驗證輸入，並在註冊成功後設置當前使用者。
  */
 @HiltViewModel
 class SignupViewModel @Inject constructor(
@@ -23,7 +23,7 @@ class SignupViewModel @Inject constructor(
     private val TAG = "SignupViewModel"
 
     /**
-     * 保存用戶信息到數據庫並設置當前用戶
+     * 保存使用者資訊到資料庫並設置當前使用者
      */
     fun saveUser(
         email: String,
@@ -58,15 +58,15 @@ class SignupViewModel @Inject constructor(
             )
 
             try {
-                // 保存用戶到數據庫
+                // 保存使用者到資料庫
                 userDao.insertUser(user)
                 Log.d(TAG, "User saved to database successfully")
 
-                // 設置當前用戶
+                // 設置當前使用者
                 authManager.setCurrentUser(email)
                 Log.d(TAG, "Current user set in AuthManager")
 
-                // 驗證用戶是否成功保存和設置
+                // 驗證使用者是否成功保存和設置
                 val savedUser = userDao.getUserByEmail(email)
                 Log.d(TAG, "Verified saved user: $savedUser")
                 val currentUserEmail = authManager.getCurrentUserEmail()
@@ -79,7 +79,7 @@ class SignupViewModel @Inject constructor(
     }
 
     /**
-     * 驗證用戶輸入的數據
+     * 驗證使用者輸入的數據
      */
     private fun validateInput(
         email: String,

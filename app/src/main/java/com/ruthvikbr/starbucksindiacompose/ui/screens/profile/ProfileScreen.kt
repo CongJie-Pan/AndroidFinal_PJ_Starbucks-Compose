@@ -1,5 +1,5 @@
-// ProfileScreen 實現了 Starbucks APP 的個人檔案頁面，顯示用戶資訊和各種設定選項。
-// 此畫面包含用戶資料展示、設定選單、登出功能，並與 ViewModel 和導航系統整合。
+// ProfileScreen 實現了 Starbucks APP 的個人檔案頁面，顯示使用者資訊和各種設定選項。
+// 此畫面包含使用者資料展示、設定選單、登出功能，並與 ViewModel 和導航系統整合。
 
 package com.ruthvikbr.starbucksindiacompose.ui.screens.profile
 
@@ -37,7 +37,7 @@ fun ProfileScreen(
     // 獲取當前上下文
     val context = LocalContext.current
 
-    // 從 ViewModel 獲取用戶狀態
+    // 從 ViewModel 獲取使用者狀態
     val user by viewModel.user.collectAsState()
 
     Scaffold(
@@ -54,7 +54,7 @@ fun ProfileScreen(
                 .fillMaxSize()
                 .background(HouseGreenSecondary)
         ) {
-            // 顯示用戶資料
+            // 顯示使用者資料
             item {
                 ProfileDetails(user = user)
             }

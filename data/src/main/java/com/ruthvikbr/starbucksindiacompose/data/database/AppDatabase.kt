@@ -9,8 +9,8 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import com.ruthvikbr.starbucksindiacompose.data.dao.UserDao
 import com.ruthvikbr.starbucksindiacompose.data.entity.User
 
-// AppDatabase 定義了應用程序的主數據庫，使用 Room 持久性庫。
-// 它確保整個應用程序中只有一個數據庫實例，並提供對各種 DAO 的訪問。
+// AppDatabase 定義了應用程序的主資料庫，使用 Room 持久性庫。
+// 它確保整個應用程序中只有一個資料庫實例，並提供對各種 DAO 的訪問。
 
 @Database(entities = [User::class], version = 3, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {

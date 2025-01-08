@@ -1,5 +1,5 @@
-// 此代碼定義了應用程序的入口點，並初始化了必要的組件。
-// 它使用 Hilt 進行依賴注入，並在應用啟動時初始化數據庫。
+// 此程式碼定義了應用程序的入口點，並初始化了必要的組件。
+// 它使用 Hilt 進行依賴注入，並在應用啟動時初始化資料庫。
 
 package com.ruthvikbr.starbucksindiacompose
 
@@ -29,11 +29,11 @@ class StarbucksApp : Application() {
         }
     }
 
-    // 初始化數據庫的私有方法
+    // 初始化資料庫的私有方法
     private fun initializeDatabase() {
-        // 使用協程在 IO 線程中初始化數據庫
+        // 使用協程在 IO 線程中初始化資料庫
         CoroutineScope(Dispatchers.IO).launch {
-            // 通過訪問 writableDatabase 來觸發數據庫的創建或打開
+            // 通過訪問 writableDatabase 來觸發資料庫的創建或打開
             database.openHelper.writableDatabase
         }
     }

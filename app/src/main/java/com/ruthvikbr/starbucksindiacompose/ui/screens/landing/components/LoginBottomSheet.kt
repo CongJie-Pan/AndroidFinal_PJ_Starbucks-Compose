@@ -1,5 +1,5 @@
-// 此代碼實現了Starbucks應用的登錄底部表單界面。
-// 它提供了用戶名和密碼輸入，以及登錄、註冊和獲取幫助的功能。
+// 此程式碼實現了Starbucks應用的登錄底部表單界面。
+// 它提供了使用者名和密碼輸入，以及登錄、註冊和獲取幫助的功能。
 
 package com.ruthvikbr.starbucksindiacompose.ui.screens.landing.components
 
@@ -46,7 +46,7 @@ fun LoginBottomSheet(
         )
         SpacerComponent(spaceInDp = 48.dp)
 
-        // 用戶名輸入框
+        // 使用者名輸入框
         StarbucksTextField(
             value = username,
             placeholder = stringResource(id = R.string.username_hint),

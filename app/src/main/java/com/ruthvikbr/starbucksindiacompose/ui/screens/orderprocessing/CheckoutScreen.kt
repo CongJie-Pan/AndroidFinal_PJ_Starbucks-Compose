@@ -27,17 +27,28 @@ import com.starbuckscompose.navigation.ComposeNavigator
 import com.starbuckscompose.navigation.StarbucksScreen
 import kotlinx.coroutines.launch
 
+/*
+ * 此檔案實現了結帳畫面的完整邏輯和UI整合
+ * 管理結帳流程中的狀態和用戶交互
+ * 整合了底部彈出支付表單的功能
+ */
+
 @ExperimentalMaterialApi
 @Composable
 fun CheckoutScreen(
+    // composeNavigator: 處理畫面導航的導航器
     composeNavigator: ComposeNavigator,
+    // viewModel: 管理結帳相關的數據和業務邏輯
     viewModel: CheckoutViewModel = hiltViewModel()
 ) {
+    // 監聽購物車商品狀態
     val cartItemsState by viewModel.cartItems.collectAsState()
     val cartItems by cartItemsState.collectAsState(initial = emptyList())
 
+    // 協程作用域，用於處理異步操作
     val coroutineScope = rememberCoroutineScope()
 
+    // 底部彈出表單的狀態管理
     val sheetState =
         rememberBottomSheetState(
             initialValue = if (cartItems.isEmpty()) BottomSheetValue.Collapsed else BottomSheetValue.Expanded
@@ -49,6 +60,7 @@ fun CheckoutScreen(
         mutableStateOf("")
     }
 
+    // 監聽購物車變化，自動展開或收起底部表單
     LaunchedEffect(key1 = cartItems) {
         if (cartItems.isEmpty()) {
             coroutineScope.launch {
@@ -61,6 +73,7 @@ fun CheckoutScreen(
         }
     }
 
+    // 底部彈出式表單的架構設置
     BottomSheetScaffold(
         scaffoldState = scaffoldState,
         sheetContent = {
@@ -77,6 +90,7 @@ fun CheckoutScreen(
         sheetPeekHeight = 0.dp,
         modifier = Modifier.background(SecondaryWhite)
     ) {
+        // 根據購物車是否為空顯示不同的內容
         if (cartItems.isEmpty()) {
             EmptyCheckoutScreen {
                 composeNavigator.navigateUp()

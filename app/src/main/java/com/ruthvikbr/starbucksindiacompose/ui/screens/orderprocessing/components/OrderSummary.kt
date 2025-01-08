@@ -16,10 +16,16 @@ import com.ruthvikbr.starbucksindiacompose.ui.components.SpacerComponent
 import com.ruthvikbr.starbucksindiacompose.ui.screens.order.components.OrderItemCard
 import com.ruthvikbr.starbucksindiacompose.ui.theme.PrimaryBlack
 
+/*
+ * 此檔案實現訂單摘要的UI組件
+ * 負責顯示購物車中所有商品的列表
+ * 提供訂單項目的數量修改功能
+ */
+
 @Composable
 fun OrderSummary(
-    cartItems: List<DMOrderItem>,
-    onCartItemCountUpdate: (DMOrderItem, UpdateOrderItemAction) -> Unit
+    cartItems: List<DMOrderItem>,        // 購物車商品列表
+    onCartItemCountUpdate: (DMOrderItem, UpdateOrderItemAction) -> Unit    // 更新購物車商品數量的回調函數
 ) {
     Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)) {
         SpacerComponent(spaceInDp = 16.dp)

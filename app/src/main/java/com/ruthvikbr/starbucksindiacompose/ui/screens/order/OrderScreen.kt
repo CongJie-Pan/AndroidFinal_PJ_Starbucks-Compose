@@ -55,16 +55,25 @@ import com.starbuckscompose.navigation.ComposeNavigator
 import com.starbuckscompose.navigation.StarbucksScreen
 import kotlinx.coroutines.launch
 
+/*
+ * 此檔案實現星巴克應用的主要訂購畫面
+ * 包含商品分類標籤、商品列表和購物車底部表單
+ * 整合了訂單管理的所有主要功能
+ */
+
 @OptIn(ExperimentalComposeUiApi::class)
 @ExperimentalMaterialApi
 @ExperimentalPagerApi
 @Composable
 fun OrderScreen(
-    composeNavigator: ComposeNavigator,
-    selectedCategory: String?,
-    viewModel: OrderViewModel = hiltViewModel(),
+    composeNavigator: ComposeNavigator,      // 畫面導航控制器
+    selectedCategory: String?,               // 當前選擇的商品類別
+    viewModel: OrderViewModel = hiltViewModel(), // 訂單畫面的ViewModel
 ) {
+    // pagerState用於控制分類標籤的滑動狀態
     val pagerState = rememberPagerState()
+    
+    // 記錄當前活動的分類索引
     var activeIndex by remember {
         mutableStateOf(Constants.HOT_COFFEE)
     }
@@ -77,6 +86,7 @@ fun OrderScreen(
     val cartItemsState by viewModel.cartItems.collectAsState()
     val cartItems by cartItemsState.collectAsState(initial = emptyList())
 
+    // 底部購物車展開狀態控制
     val sheetState =
         rememberBottomSheetState(initialValue = if (cartItems.isEmpty()) BottomSheetValue.Collapsed else BottomSheetValue.Expanded)
     val scaffoldState = rememberBottomSheetScaffoldState(
@@ -166,9 +176,9 @@ fun OrderScreen(
 @OptIn(ExperimentalPagerApi::class)
 @Composable
 fun Tabs(
-    pagerState: PagerState,
-    menuCategories: List<DMPopularMenuItem>,
-    onTabSelected: (String) -> Unit,
+    pagerState: PagerState,                // 分頁控制狀態
+    menuCategories: List<DMPopularMenuItem>, // 菜單分類列表
+    onTabSelected: (String) -> Unit,        // 分類選擇回調
 ) {
     val scope = rememberCoroutineScope()
     ScrollableTabRow(
@@ -206,10 +216,10 @@ fun Tabs(
 @ExperimentalPagerApi
 @Composable
 fun TabsContent(
-    pagerState: PagerState,
-    menuCategories: List<DMPopularMenuItem>,
-    orderItems: List<DMOrderItem>,
-    updateOrderItem: (DMOrderItem, UpdateOrderItemAction) -> Unit,
+    pagerState: PagerState,                // 分頁控制狀態
+    menuCategories: List<DMPopularMenuItem>, // 菜單分類列表
+    orderItems: List<DMOrderItem>,          // 訂單項目列表
+    updateOrderItem: (DMOrderItem, UpdateOrderItemAction) -> Unit, // 更新訂單項目的回調
 ) {
     HorizontalPager(state = pagerState, count = menuCategories.size) {
         TabContentScreen(orderItems = orderItems, updateOrderItem)
@@ -218,8 +228,8 @@ fun TabsContent(
 
 @Composable
 fun TabContentScreen(
-    orderItems: List<DMOrderItem>,
-    updateOrderItem: (DMOrderItem, UpdateOrderItemAction) -> Unit,
+    orderItems: List<DMOrderItem>,          // 訂單項目列表
+    updateOrderItem: (DMOrderItem, UpdateOrderItemAction) -> Unit // 更新訂單項目的回調
 ) {
     LazyColumn(
         modifier = Modifier

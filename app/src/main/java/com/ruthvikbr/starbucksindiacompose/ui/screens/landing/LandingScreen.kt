@@ -1,4 +1,4 @@
-// 此代碼實現了Starbucks應用的登陸頁面。
+// 此程式碼實現了Starbucks應用的登陸頁面。
 // 它包含一個背景圖片、一個可點擊的底部按鈕，以及一個可滑動的底部表單，用於登錄和獲取幫助。
 
 package com.ruthvikbr.starbucksindiacompose.ui.screens.landing

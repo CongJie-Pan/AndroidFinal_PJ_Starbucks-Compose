@@ -89,7 +89,7 @@
     <string name="login">登入</string>
     <string name="sign_up">註冊</string>
     <string name="get_help_description">請輸入您的註冊資料，我們將發送驗證碼以重設密碼</string>
-    <string name="username">用戶名</string>
+    <string name="username">使用者名</string>
     <string name="username_hint">輸入電子郵件或手機號碼</string>
     <string name="date_of_birth">出生日期</string>
     <string name="date_of_birth_hint">日/月/年</string>

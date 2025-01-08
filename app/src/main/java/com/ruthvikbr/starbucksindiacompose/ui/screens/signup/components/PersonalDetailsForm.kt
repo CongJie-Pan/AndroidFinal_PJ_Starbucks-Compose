@@ -265,7 +265,7 @@ fun ReferralForm(
     }
 }
 
-// PreferencesForm 組件：處理用戶通知偏好設定
+// PreferencesForm 組件：處理使用者通知偏好設定
 @Composable
 fun PreferencesForm(
     isSmsEnabled: Boolean,
@@ -273,7 +273,7 @@ fun PreferencesForm(
     onSmsPreferenceChanged: (Boolean) -> Unit,
     onEmailPreferenceChanged: (Boolean) -> Unit,
 ) {
-    // 允許用戶選擇接收 SMS 或 Email 通知的偏好
+    // 允許使用者選擇接收 SMS 或 Email 通知的偏好
     Column(modifier = Modifier.fillMaxWidth().background(PrimaryWhite)) {
         Text(
             text = stringResource(id = R.string.preferences_terms),

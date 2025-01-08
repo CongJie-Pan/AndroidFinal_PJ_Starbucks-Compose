@@ -14,8 +14,8 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 /**
- * ProfileViewModel 負責管理用戶個人資料的顯示和更新。
- * 它處理用戶數據的加載、更新和登出操作，並提供了詳細的日誌記錄以便追蹤操作和錯誤。
+ * ProfileViewModel 負責管理使用者個人資料的顯示和更新。
+ * 它處理使用者數據的加載、更新和登出操作，並提供了詳細的日誌記錄以便追蹤操作和錯誤。
  */
 @HiltViewModel
 class ProfileViewModel @Inject constructor(

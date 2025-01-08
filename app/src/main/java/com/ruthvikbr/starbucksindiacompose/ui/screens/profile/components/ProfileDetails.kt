@@ -1,6 +1,6 @@
 /*
- * 此組件負責顯示用戶的詳細個人資料，包括頭像、姓名、聯絡資訊等。
- * 它使用 ViewModel 來管理和獲取用戶數據，並以響應式方式更新 UI。
+ * 此組件負責顯示使用者的詳細個人資料，包括頭像、姓名、聯絡資訊等。
+ * 它使用 ViewModel 來管理和獲取使用者數據，並以響應式方式更新 UI。
  */
 
 package com.ruthvikbr.starbucksindiacompose.ui.screens.profile.components
@@ -26,7 +26,7 @@ import java.util.Locale
 
 @Composable
 fun ProfileDetails(viewModel: ProfileViewModel = hiltViewModel(),user: User?) {
-    // 使用 collectAsState 來觀察用戶數據的變化
+    // 使用 collectAsState 來觀察使用者數據的變化
     val user = viewModel.user.collectAsState().value
 
     Log.d("ProfileDetails", "Collected user: $user")
@@ -38,12 +38,12 @@ fun ProfileDetails(viewModel: ProfileViewModel = hiltViewModel(),user: User?) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
-        // 顯示用戶頭像
+        // 顯示使用者頭像
         ProfilePicture()
 
         SpacerComponent(spaceInDp = 16.dp)
 
-        // 顯示用戶全名
+        // 顯示使用者全名
         Text(
             text = "${user?.firstName} ${user?.lastName}",
             style = MaterialTheme.typography.h4,
@@ -62,14 +62,14 @@ fun ProfileDetails(viewModel: ProfileViewModel = hiltViewModel(),user: User?) {
 
         SpacerComponent(spaceInDp = 16.dp)
 
-        // 顯示用戶聯絡資訊
+        // 顯示使用者聯絡資訊
         UserInfoItem(label = "電子郵件", value = user?.email)
         UserInfoItem(label = "手機號碼", value = user?.mobileNumber)
 
-        // 顯示用戶生日，改善顯示格式
+        // 顯示使用者生日，改善顯示格式
         UserInfoItem(label = "生日", value = user?.birthday?.let { formatDate(it) })
 
-        // 顯示用戶偏好設定
+        // 顯示使用者偏好設定
         SpacerComponent(spaceInDp = 8.dp)
         Text(
             text = "您的訊息偏好設定",
@@ -94,7 +94,7 @@ fun formatDate(dateString: String): String {
     }
 }
 
-// 定義了一個名為UserInfoItem的Composable函數,用於顯示用戶的資訊項目。
+// 定義了一個名為UserInfoItem的Composable函數,用於顯示使用者的資訊項目。
 @Composable
 private fun UserInfoItem(label: String, value: String?) {
     Row(
@@ -116,7 +116,7 @@ private fun UserInfoItem(label: String, value: String?) {
     }
 }
 
-// 此 UserPreferenceItem Composable函數用於顯示用戶偏好設定項目,並根據啟用狀態顯示相應的文本和顏色。
+// 此 UserPreferenceItem Composable函數用於顯示使用者偏好設定項目,並根據啟用狀態顯示相應的文本和顏色。
 @Composable
 private fun UserPreferenceItem(label: String, isEnabled: Boolean) {
     Row(

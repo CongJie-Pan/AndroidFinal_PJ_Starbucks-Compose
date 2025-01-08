@@ -210,7 +210,7 @@ fun SignupScreen(
                     onSmsPreferenceChanged = { isSmsEnabled = it },
                     onEmailPreferenceChanged = { isEmailEnabled = it },
                     onSubmitClicked = {
-                        // 在這裡調用 ViewModel 的方法來保存用戶資料
+                        // 在這裡調用 ViewModel 的方法來保存使用者資料
                         viewModel.saveUser(
                             email = email,
                             password = password,
