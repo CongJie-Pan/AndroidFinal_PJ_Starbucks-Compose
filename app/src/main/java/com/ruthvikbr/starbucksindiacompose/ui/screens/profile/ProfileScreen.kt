@@ -82,8 +82,8 @@ fun ProfileScreen(
                             }
                         }
                     )
-                    SpacerComponent(spaceInDp = 64.dp)
-                    ReferralCard()
+                    //SpacerComponent(spaceInDp = 64.dp)
+                    //ReferralCard()
                     SpacerComponent(spaceInDp = 32.dp)
                     AppVersion()
                     SpacerComponent(spaceInDp = 150.dp)
