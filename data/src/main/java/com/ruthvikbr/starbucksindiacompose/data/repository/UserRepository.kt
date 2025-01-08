@@ -1,6 +1,3 @@
-// 此類別作為用戶數據的存儲庫，提供了一個抽象層來訪問用戶數據。
-// 它封裝了數據訪問的邏輯，使得 ViewModel 可以更方便地操作用戶數據。
-
 package com.ruthvikbr.starbucksindiacompose.data.repository
 
 import android.util.Log
@@ -10,6 +7,8 @@ import javax.inject.Inject
 
 class UserRepository @Inject constructor(private val userDao: UserDao) {
 
+    private val TAG = "UserRepository"
+
     /**
      * 插入或更新用戶
      * @param user 要插入或更新的用戶對象
@@ -17,26 +16,67 @@ class UserRepository @Inject constructor(private val userDao: UserDao) {
     suspend fun insertUser(user: User) {
         try {
             userDao.insertUser(user)
-            Log.d("UserRepository", "User inserted/updated successfully: $user")
+            Log.d(TAG, "User inserted/updated successfully: $user")
         } catch (e: Exception) {
-            Log.e("UserRepository", "Error inserting/updating user: ${e.message}", e)
+            Log.e(TAG, "Error inserting/updating user: ${e.message}", e)
         }
     }
 
     /**
-     * 根據電子郵件地址獲取用戶
+     * 獲取用戶
      * @param email 用戶的電子郵件地址
-     * @return 返回匹配的用戶對象，如果沒有找到則返回 null
+     * @return 返回用戶對象，如果沒有用戶則返回 null
      */
-    suspend fun getUserByEmail(email: String): User? {
-        val user = userDao.getUserByEmail(email)
-        Log.d("UserRepository", "getUserByEmail for $email, result: $user")
-        return user
+    suspend fun getUser(email: String): User? {
+        return try {
+            val user = userDao.getUserByEmail(email)
+            Log.d(TAG, "Retrieved user: $user")
+            user
+        } catch (e: Exception) {
+            Log.e(TAG, "Error retrieving user: ${e.message}", e)
+            null
+        }
     }
 
     /**
-     * 獲取所有用戶
-     * @return 返回所有用戶的列表
+     * 更新用戶信息
+     * @param user 更新後的用戶對象
      */
-    suspend fun getAllUsers() = userDao.getAllUsers()
+    suspend fun updateUser(user: User) {
+        try {
+            userDao.updateUser(user)
+            Log.d(TAG, "User updated successfully: $user")
+        } catch (e: Exception) {
+            Log.e(TAG, "Error updating user: ${e.message}", e)
+        }
+    }
+
+    /**
+     * 刪除用戶
+     * @param email 要刪除的用戶的電子郵件地址
+     */
+    suspend fun deleteUser(email: String) {
+        try {
+            userDao.deleteUser(email)
+            Log.d(TAG, "User deleted successfully for email: $email")
+        } catch (e: Exception) {
+            Log.e(TAG, "Error deleting user: ${e.message}", e)
+        }
+    }
+
+    /**
+     * 檢查是否存在用戶
+     * @param email 要檢查的用戶的電子郵件地址
+     * @return 如果存在用戶則返回 true，否則返回 false
+     */
+    suspend fun userExists(email: String): Boolean {
+        return try {
+            val exists = userDao.userExists(email)
+            Log.d(TAG, "User exists for email $email: $exists")
+            exists
+        } catch (e: Exception) {
+            Log.e(TAG, "Error checking if user exists: ${e.message}", e)
+            false
+        }
+    }
 }

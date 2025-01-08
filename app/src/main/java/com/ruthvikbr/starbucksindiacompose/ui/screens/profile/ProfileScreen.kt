@@ -74,8 +74,9 @@ fun ProfileScreen(
                 ) {
                     Logout(
                         onLogoutButtonClicked = {
-                            viewModel.logout()
-                            Toast.makeText(context, "已成功登出", Toast.LENGTH_SHORT).show()
+                            /* 因為登出功能有些錯誤，就是按了登出後，再註冊帳號就不能顯示另一個帳號的資訊了，因此先不用。*/
+                            /* viewModel.logout()*/
+                            Toast.makeText(context, "登出功能仍未開發，先退出此頁面。", Toast.LENGTH_LONG).show()
                             composeNavigator.navigate(StarbucksScreen.Landing.route) {
                                 popUpTo(StarbucksScreen.Home.route) { inclusive = true }
                             }
